@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevStudent | Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="light-mode">
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Dev<span>Student</span></h1>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="portfolio.html" class="active">Portfolio</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="testimonials.html">Testimonials</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </div>
+                <div class="hamburger">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>My Portfolio</h1>
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a> / <span>Portfolio</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="portfolio">
+            <div class="container">
+                <div class="portfolio-filter">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="web">Web Development</button>
+                    <button class="filter-btn" data-filter="mobile">Mobile Apps</button>
+                    <button class="filter-btn" data-filter="ui">UI/UX Design</button>
+                    <button class="filter-btn" data-filter="ml">Machine Learning</button>
+                </div>
+
+                <div class="portfolio-grid">
+                    <div class="portfolio-item" data-category="web">
+                        <div class="portfolio-img">
+                            <img src="images/project1.jpg" alt="E-commerce Website">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-info">
+                                    <h3>E-commerce Platform</h3>
+                                    <p>Web Development</p>
+                                    <a href="#" class="portfolio-link" data-project="project1"><i class="fas fa-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item" data-category="ml">
+                        <div class="portfolio-img">
+                            <img src="images/project2.jpg" alt="AI Chatbot">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-info">
+                                    <h3>AI Chatbot</h3>
+                                    <p>Machine Learning</p>
+                                    <a href="#" class="portfolio-link" data-project="project2"><i class="fas fa-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item" data-category="mobile">
+                        <div class="portfolio-img">
+                            <img src="images/project3.jpg" alt="Fitness Tracker App">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-info">
+                                    <h3>Fitness Tracker App</h3>
+                                    <p>Mobile Development</p>
+                                    <a href="#" class="portfolio-link" data-project="project3"><i class="fas fa-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item" data-category="ui">
+                        <div class="portfolio-img">
+                            <img src="images/project4.jpg" alt="Travel App UI Design">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-info">
+                                    <h3>Travel App UI Design</h3>
+                                    <p>UI/UX Design</p>
+                                    <a href="#" class="portfolio-link" data-project="project4"><i class="fas fa-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item" data-category="web">
+                        <div class="portfolio-img">
+                            <img src="images/project5.jpg" alt="Portfolio Website">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-info">
+                                    <h3>Portfolio Website</h3>
+                                    <p>Web Development</p>
+                                    <a href="#" class="portfolio-link" data-project="project5"><i class="fas fa-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item" data-category="ml">
+                        <div class="portfolio-img">
+                            <img src="images/project6.jpg" alt="Image Recognition">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-info">
+                                    <h3>Image Recognition System</h3>
+                                    <p>Machine Learning</p>
+                                    <a href="#" class="portfolio-link" data-project="project6"><i class="fas fa-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Modal -->
+        <div class="portfolio-modal" id="portfolioModal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <div class="modal-body">
+                    <!-- Content will be loaded dynamically -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Project Details (Hidden, loaded via JavaScript) -->
+        <div class="project-details" id="project1" style="display: none;">
+            <div class="project-header">
+                <h2>E-commerce Platform</h2>
+                <p class="project-category">Web Development</p>
+            </div>
+            <div class="project-gallery">
+                <img src="images/project1.jpg" alt="E-commerce Website">
+            </div>
+            <div class="project-info">
+                <div class="project-description">
+                    <h3>Project Overview</h3>
+                    <p>A full-featured e-commerce platform built with modern web technologies. This project includes product listings, shopping cart functionality, user authentication, and payment processing.</p>
+                    
+                    <h3>Technologies Used</h3>
+                    <ul class="tech-stack">
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>JavaScript</li>
+                        <li>Node.js</li>
+                        <li>Express</li>
+                        <li>MongoDB</li>
+                        <li>Stripe API</li>
+                    </ul>
+                    
+                    <h3>Key Features</h3>
+                    <ul>
+                        <li>Responsive product catalog with filtering and search</li>
+                        <li>User registration and authentication</li>
+                        <li>Shopping cart and wishlist functionality</li>
+                        <li>Secure payment processing</li>
+                        <li>Order tracking and history</li>
+                        <li>Admin dashboard for product and order management</li>
+                    </ul>
+                </div>
+                <div class="project-meta">
+                    <div class="meta-item">
+                        <h4>Client</h4>
+                        <p>TechStart Inc.</p>
+                    </div>
+                    <div class="meta-item">
+                        <h4>Date</h4>
+                        <p>June 2022</p>
+                    </div>
+                    <div class="meta-item">
+                        <h4>Role</h4>
+                        <p>Full Stack Developer</p>
+                    </div>
+                    <div class="meta-item">
+                        <h4>Live Demo</h4>
+                        <a href="#" class="btn btn-sm">View Demo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Similar structures for other project details (project2, project3, etc.) -->
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>Dev<span>Student</span></h2>
+                    <p>Building the future, one line of code at a time.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3>Connect With Me</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 DevStudent. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
