@@ -1,4 +1,4 @@
-/* ===== PROFESSIONAL ANIMATION SYSTEM ===== */
+/* =====ANIMATION SYSTEM ===== */
 
 /* Animation Variables */
 :root {
@@ -801,3 +801,225 @@ main.page.active,
           max-width: 100%;
       }
   }
+
+
+  /* Remove these lines if they exist */
+main.page,
+main.page.slide-out,
+main.page.slide-in,
+main.page.active,
+.page-transition-overlay,
+.content-container {
+  all: unset;
+}
+
+/* ======================
+   Blog Image Adjustments
+   ====================== */
+   .blog-post .blog-img {
+    height: 600px !important; /* Force the height change */
+    max-height: 600px !important;
+}
+
+.blog-post .blog-img img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    transform: none !important; /* Remove any transform effects */
+    transition: none !important; /* Remove transition if causing issues */
+}
+
+/* Make hover effect more subtle */
+.blog-post:hover .blog-img img {
+    transform: scale(1.03) !important; /* Reduced from 1.1 */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .blog-post .blog-img {
+        height: 180px !important;
+        max-height: 180px !important;
+    }
+}
+
+/* Center-align all text in blog content */
+.blog-content {
+  text-align: center;
+  padding: 1.5rem 2rem; /* Adjust padding as needed */
+}
+
+/* Center meta information */
+.blog-meta {
+  justify-content: center;
+  flex-wrap: wrap; /* Allows items to wrap on small screens */
+}
+
+/* Center the "Read More" button */
+.blog-content .btn {
+  display: inline-block; /* Needed for margin auto to work */
+  margin: 1rem auto 0; /* Top 1rem, left/right auto, bottom 0 */
+}
+
+/* ======================
+   Elegant Sidebar Styling
+   ====================== */
+
+   .blog-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem; /* Replaces <br> tags with proper spacing */
+}
+
+.sidebar-widget {
+    background-color: var(--light-color);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    box-shadow: var(--box-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.dark-mode .sidebar-widget {
+    background-color: #1e1e1e;
+}
+
+.sidebar-widget:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Widget Headings */
+.sidebar-widget h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.sidebar-widget h3::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--primary-color), transparent);
+}
+
+/* Search Form */
+.search-form {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.search-form input {
+    flex: 1;
+    padding: 12px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 30px;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.search-form input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(138, 43, 226, 0.1);
+}
+
+.search-form button {
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.search-form button:hover {
+    background-color: var(--secondary-color);
+    transform: scale(1.05);
+}
+
+/* Categories List */
+.categories-widget ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.categories-widget li {
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.categories-widget li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+
+.categories-widget a {
+    display: flex;
+    justify-content: space-between;
+    color: var(--text-color);
+    padding: 0.5rem 0;
+    transition: all 0.3s ease;
+    border-bottom: 1px dashed var(--border-color);
+}
+
+.categories-widget a:hover {
+    color: var(--primary-color);
+    padding-left: 5px;
+    border-bottom-color: var(--primary-color);
+}
+
+.categories-widget span {
+    color: var(--text-color-light);
+    font-size: 0.9rem;
+}
+
+/* Tags Cloud */
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.tags a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: var(--gray-color);
+    color: var(--text-color);
+    border-radius: 30px;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+}
+
+body.dark-mode .tags a {
+    background-color: #2a2a2a;
+}
+
+.tags a:hover {
+    background-color: var(--primary-color);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .blog-sidebar {
+        gap: 2rem;
+    }
+    
+    .sidebar-widget {
+        padding: 1.5rem;
+    }
+}
+
