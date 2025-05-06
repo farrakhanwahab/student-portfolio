@@ -315,7 +315,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    height: 3px;
+    height: 6px;
     background: linear-gradient(90deg, var(--primary-color), var(--accent-color, var(--primary-color)));
     z-index: 9998;
     width: 0%;
@@ -472,53 +472,56 @@
   }
   
   /* Page transition progress indicator */
-  .transition-progress {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 5px;
-    background-color: rgba(0, 0, 0, 0.1);
-    z-index: 9999;
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform var(--page-transition-duration) linear;
+  /* Remove the sliding animation styles and replace with loading animation */
+.page-transition-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--light-color);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+body.dark-mode .page-transition-container {
+  background-color: var(--dark-color);
+}
+
+.page-transition-container.hide {
+  opacity: 0;
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 3px solid rgba(138, 43, 226, 0.3);
+  border-radius: 50%;
+  border-top-color: var(--primary-color);
+  animation: spin 0.5s linear infinite;
+}
+
+@keyframes spin {
+  to {
+      transform: rotate(360deg);
   }
-  
-  .transition-progress.active {
-    transform: scaleX(1);
-  }
-  
-  /* Enhanced page transition effects */
-  @keyframes pageSlideIn {
-    0% {
-      transform: translateX(-25%) scale(0.9) rotateY(5deg);
-      opacity: 0;
-    }
-    100% {
-      transform: translateX(0) scale(1) rotateY(0);
-      opacity: 1;
-    }
-  }
-  
-  @keyframes pageSlideOut {
-    0% {
-      transform: translateX(0) scale(1) rotateY(0);
-      opacity: 1;
-    }
-    100% {
-      transform: translateX(25%) scale(0.9) rotateY(-5deg);
-      opacity: 0;
-    }
-  }
-  
-  .page-slide-in {
-    animation: pageSlideIn var(--page-transition-duration) var(--easing-page-transition) forwards;
-  }
-  
-  .page-slide-out {
-    animation: pageSlideOut var(--page-transition-duration) var(--easing-page-transition) forwards;
-  }
+}
+
+/* Remove all the sliding animation related styles */
+main.page,
+main.page.slide-out,
+main.page.slide-in,
+main.page.active,
+.page-transition-overlay,
+.content-container {
+  all: unset;
+}
+
 
   /* 
     ======================

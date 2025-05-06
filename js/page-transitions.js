@@ -25,88 +25,37 @@ document.addEventListener('DOMContentLoaded', function() {
  * Create and append animation elements to the DOM
  */
 function setupAnimationElements() {
-    // Create page transition container and overlay
+    // Create page transition container and spinner
     const transitionContainer = document.createElement('div');
     transitionContainer.className = 'page-transition-container';
     
-    const transitionOverlay = document.createElement('div');
-    transitionOverlay.className = 'page-transition-overlay';
+    const spinner = document.createElement('div');
+    spinner.className = 'loading-spinner';
     
-    transitionContainer.appendChild(transitionOverlay);
+    transitionContainer.appendChild(spinner);
     document.body.appendChild(transitionContainer);
     
     // Create scroll indicator
     const scrollIndicator = document.createElement('div');
     scrollIndicator.className = 'scroll-indicator';
     document.body.appendChild(scrollIndicator);
-    
-    // Create transition progress indicator
-    const transitionProgress = document.createElement('div');
-    transitionProgress.className = 'transition-progress';
-    document.body.appendChild(transitionProgress);
-    
-    // Wrap main content for enhanced transitions
-    const main = document.querySelector('main');
-    if (main && !main.parentElement.classList.contains('page-wrapper')) {
-        const wrapper = document.createElement('div');
-        wrapper.className = 'page-wrapper';
-        main.parentNode.insertBefore(wrapper, main);
-        wrapper.appendChild(main);
-    }
-    
-    // Add content container for staggered animations
-    const main2 = document.querySelector('main');
-    if (main2) {
-        if (!document.querySelector('.content-container')) {
-            const contentElements = Array.from(main2.children);
-            const contentContainer = document.createElement('div');
-            contentContainer.className = 'content-container';
-            
-            contentElements.forEach(element => {
-                contentContainer.appendChild(element);
-            });
-            
-            main2.appendChild(contentContainer);
-        }
-    }
 }
 
 /**
  * Initialize animations when the page loads
  */
 function initializeAnimations() {
-    // Add fade-in animation to the main content
-    const main = document.querySelector('main');
-    if (main) {
-        main.classList.add('page');
-        
-        // Check if this is a page load or navigation
-        const isNavigation = sessionStorage.getItem('isNavigating') === 'true';
-        
-        if (isNavigation) {
-            // Handle navigation animation
-            main.classList.add('slide-in');
+    // Hide the loading spinner after 0.5 seconds
+    const transitionContainer = document.querySelector('.page-transition-container');
+    if (transitionContainer) {
+        setTimeout(() => {
+            transitionContainer.classList.add('hide');
             
-            // Delay to ensure DOM is ready
+            // Remove it from DOM after animation completes
             setTimeout(() => {
-                main.classList.remove('slide-in');
-                main.classList.add('active');
-                
-                // Reveal content elements with staggered timing
-                revealContentElements();
-                
-                // Reset navigation flag
-                sessionStorage.removeItem('isNavigating');
-            }, 50);
-        } else {
-            // Handle initial page load animation
-            setTimeout(() => {
-                main.classList.add('active');
-                
-                // Reveal content elements with staggered timing
-                revealContentElements();
-            }, 100);
-        }
+                transitionContainer.remove();
+            }, 300);
+        }, 500);
     }
     
     // Initialize skill bars if on a page with skills
@@ -126,61 +75,45 @@ function initializeAnimations() {
 }
 
 /**
- * Add animation classes to existing elements
+ * Set up enhanced page transitions with loading spinner
  */
-function addAnimationClasses() {
-    // Add content-reveal to section titles
-    document.querySelectorAll('.section-title').forEach(title => {
-        if (!title.classList.contains('content-reveal')) {
-            title.classList.add('content-reveal');
-        }
-    });
-    
-    // Add image-reveal to image containers
-    document.querySelectorAll('.hero-image, .about-image, .project-img, .blog-img').forEach(imgContainer => {
-        if (!imgContainer.classList.contains('image-reveal')) {
-            imgContainer.classList.add('image-reveal');
-        }
-    });
-    
-    // Add card-hover to card elements
-    document.querySelectorAll('.skill-card, .service-card, .project-card, .blog-card, .testimonial-card').forEach(card => {
-        if (!card.classList.contains('card-hover')) {
-            card.classList.add('card-hover');
+function setupEnhancedPageTransitions() {
+    // Handle link clicks for page transitions
+    document.addEventListener('click', function(e) {
+        // Find closest anchor element
+        const anchor = e.target.closest('a');
+        
+        if (anchor) {
+            const href = anchor.getAttribute('href');
+            
+            // Only handle internal links that aren't hash links
+            if (href && 
+                href.indexOf('#') !== 0 && 
+                href.indexOf('http') !== 0 && 
+                !anchor.hasAttribute('download') && 
+                !anchor.hasAttribute('target')) {
+                
+                e.preventDefault();
+                
+                // Create and show loading spinner
+                const transitionContainer = document.createElement('div');
+                transitionContainer.className = 'page-transition-container';
+                
+                const spinner = document.createElement('div');
+                spinner.className = 'loading-spinner';
+                
+                transitionContainer.appendChild(spinner);
+                document.body.appendChild(transitionContainer);
+                
+                // Wait for spinner to be visible before navigating
+                setTimeout(() => {
+                    window.location.href = href;
+                }, 50);
+            }
         }
     });
 }
 
-/**
- * Reveal content elements with staggered timing
- */
-function revealContentElements() {
-    // Find all content reveal elements
-    const revealElements = document.querySelectorAll('.content-reveal, .animate-text, .animate-fade-in');
-    
-    // Set up Intersection Observer to reveal elements when they come into view
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                if (entry.target.classList.contains('content-reveal')) {
-                    entry.target.classList.add('revealed');
-                } else if (entry.target.classList.contains('animate-text') || 
-                           entry.target.classList.contains('animate-fade-in')) {
-                    entry.target.classList.add('animated');
-                }
-                observer.unobserve(entry.target);
-            }
-        });
-    }, {
-        threshold: 0.1,
-        rootMargin: '0px 0px -100px 0px'
-    });
-    
-    // Observe each element
-    revealElements.forEach(element => {
-        observer.observe(element);
-    });
-}
 
 /**
  * Initialize skill bars animation
