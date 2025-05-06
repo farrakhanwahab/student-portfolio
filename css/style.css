@@ -43,7 +43,7 @@ body.dark-mode {
 
 .container {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1700px;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -70,7 +70,7 @@ img {
 
 .section-title {
     font-size: 2.5rem;
-    font-weight: 700;
+    font-weight: 500;
     text-align: center;
     margin-bottom: 3rem;
     position: relative;
@@ -93,7 +93,7 @@ img {
     display: inline-block;
     padding: 12px 30px;
     border-radius: 50px;
-    font-weight: 600;
+    font-weight: 400;
     text-align: center;
     cursor: pointer;
     transition: var(--transition);
@@ -164,7 +164,7 @@ header .container {
 
 .logo h1 {
     font-size: 1.8rem;
-    font-weight: 700;
+    font-weight: 600;
     color: var(--text-color);
 }
 
@@ -184,7 +184,7 @@ nav {
 
 .nav-links a {
     color: var(--text-color);
-    font-weight: 500;
+    font-weight: 400;
     position: relative;
 }
 
@@ -273,7 +273,7 @@ body.dark-mode .hero {
 
 .hero-content h2 {
     font-size: 1.8rem;
-    font-weight: 600;
+    font-weight: 400;
     margin-bottom: 1.5rem;
     color: var(--text-color-light);
 }
@@ -558,7 +558,7 @@ body.dark-mode .blog-card {
 }
 
 .read-more {
-    font-weight: 600;
+    font-weight: 400;
     color: var(--primary-color);
     display: inline-block;
     position: relative;
@@ -916,7 +916,7 @@ About Page
 }
 
 .info-item span {
-    font-weight: 600;
+    font-weight: 400;
     color: var(--text-color);
 }
 
@@ -1010,7 +1010,7 @@ body.dark-mode .timeline-content {
 }
 
 .timeline-content .date {
-    font-weight: 600;
+    font-weight: 400;
     color: var(--text-color-light);
     margin-bottom: 1rem;
     display: block;
@@ -1048,13 +1048,13 @@ Skills Detailed
 }
 
 .skill-name {
-    font-weight: 600;
+    font-weight: 400;
     margin-bottom: 0.5rem;
 }
 
 .skill-percent {
     text-align: right;
-    font-weight: 600;
+    font-weight: 400;
     color: var(--primary-color);
     margin-top: 0.3rem;
 }
@@ -1253,7 +1253,7 @@ body.dark-mode .pricing-card {
     color: var(--light-color);
     padding: 0.5rem 1rem;
     font-size: 0.9rem;
-    font-weight: 600;
+    font-weight: 500;
     border-bottom-left-radius: var(--border-radius);
 }
 
@@ -1274,7 +1274,7 @@ body.dark-mode .pricing-header {
 
 .pricing-header .price {
     font-size: 2.5rem;
-    font-weight: 700;
+    font-weight: 500;
     color: var(--primary-color);
     margin-bottom: 0.5rem;
 }
@@ -1322,7 +1322,7 @@ body.dark-mode .pricing-header {
 
 .pricing-note a {
     color: var(--primary-color);
-    font-weight: 600;
+    font-weight: 400;
 }
 
 /* 
@@ -1373,7 +1373,7 @@ body.dark-mode .process-step {
     align-items: center;
     justify-content: center;
     font-size: 1.5rem;
-    font-weight: 700;
+    font-weight: 500;
     margin: 0 auto 1.5rem;
 }
 
@@ -1445,7 +1445,7 @@ Portfolio Page
     border-radius: 50px;
     cursor: pointer;
     font-family: 'Poppins', sans-serif;
-    font-weight: 500;
+    font-weight: 400;
     transition: var(--transition);
 }
 
@@ -1605,7 +1605,7 @@ body.dark-mode .modal-content {
 
 .project-category {
     color: var(--primary-color);
-    font-weight: 500;
+    font-weight: 400;
 }
 
 .project-gallery {
@@ -1764,7 +1764,7 @@ body.dark-mode .certification-item {
 }
 
 .certification-date {
-    font-weight: 600;
+    font-weight: 400;
     color: var(--primary-color);
 }
 
@@ -1838,7 +1838,7 @@ body.dark-mode .language-item {
     
     .reference-title {
         color: var(--primary-color);
-        font-weight: 500;
+        font-weight: 300;
         margin-bottom: 0.5rem;
     }
     
@@ -1937,7 +1937,7 @@ body.dark-mode .language-item {
         border-radius: 50%;
         background-color: var(--gray-color);
         color: var(--text-color);
-        font-weight: 600;
+        font-weight: 400;
         transition: var(--transition);
     }
     
@@ -2121,7 +2121,7 @@ body.dark-mode .language-item {
     Testimonials Page
     ======================
     */
-    .testimonials-intro {
+    /* .testimonials-intro {
         padding: 3rem 0;
     }
     
@@ -2216,7 +2216,7 @@ body.dark-mode .language-item {
     .author-info p {
         color: var(--text-color-light);
         font-size: 0.9rem;
-    }
+    } */
     
     /* Video Testimonials */
     .video-testimonials {
@@ -2396,7 +2396,7 @@ body.dark-mode .language-item {
     .form-group label {
         display: block;
         margin-bottom: 0.5rem;
-        font-weight: 500;
+        font-weight: 400;
     }
     
     .contact-map {

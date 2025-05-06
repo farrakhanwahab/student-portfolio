@@ -363,3 +363,30 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+// Add this script to your existing JavaScript files or create a new one
+document.addEventListener('DOMContentLoaded', function() {
+    // Get all FAQ question elements
+    const faqQuestions = document.querySelectorAll('.faq-question');
+    
+    // Add click event listener to each question
+    faqQuestions.forEach(question => {
+        question.addEventListener('click', () => {
+            // Get the parent faq-item
+            const faqItem = question.parentElement;
+            
+            // Toggle active class on the clicked faq-item
+            faqItem.classList.toggle('active');
+            
+            // Optional: Close other FAQs when opening a new one
+            // Uncomment this code if you want only one FAQ open at a time
+            /*
+            document.querySelectorAll('.faq-item').forEach(item => {
+                if (item !== faqItem) {
+                    item.classList.remove('active');
+                }
+            });
+            */
+        });
+    });
+});

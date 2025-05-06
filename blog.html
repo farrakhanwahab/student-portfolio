@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style-additions.css">
 </head>
 <body class="light-mode">
     <header>
@@ -25,8 +26,8 @@
                     <li><a href="testimonials.html">Testimonials</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
-                <div class="theme-toggle">
-                    <i class="fas fa-moon"></i>
+                <div class="theme-toggle" aria-label="Toggle dark mode">
+                    <!-- Icons will be added via JavaScript -->
                 </div>
                 <div class="hamburger">
                     <div class="bar"></div>
@@ -45,7 +46,7 @@
                     <a href="index.html">Home</a> / <span>Blog</span>
                 </div>
             </div>
-        </section>
+        </section><br />
 
         <section class="blog">
             <div class="container">
@@ -53,35 +54,44 @@
                     <div class="blog-main">
                         <div class="blog-post">
                             <div class="blog-img">
-                                <img src="images/blog1.jpg" alt="Machine Learning Basics">
+                                <img src="images/blog1.png" alt="Machine Learning Basics">
                             </div>
                             <div class="blog-content">
                                 <div class="blog-meta">
                                     <span class="blog-date"><i class="fas fa-calendar-alt"></i> May 15, 2023</span>
                                     <span class="blog-category"><i class="fas fa-folder"></i> Machine Learning</span>
-                                </div>
+                                </div><br />
                                 <h2>Getting Started with Machine Learning</h2>
-                                <p>Machine learning is a rapidly growing field that enables computers to learn from data without being explicitly programmed. In this post, I'll introduce the basic concepts of machine learning and guide you through setting up your first ML project.</p>
-                                <p>We'll explore supervised learning, unsupervised learning, and reinforcement learning, along with practical examples using Python and popular libraries like scikit-learn and TensorFlow.</p>
+                                <p>Machine learning is a rapidly growing field that enables computers to learn from data without being explicitly
+                                     programmed. In this post, I'll introduce the basic concepts of machine learning and guide you through setting 
+                                     up your first ML project.</p>
+                                <p>We'll explore supervised learning, unsupervised learning, and reinforcement learning, along with practical examples 
+                                    using Python and popular libraries like scikit-learn and TensorFlow.</p>
+                                    <br />
                                 <a href="blog-post.html" class="btn btn-primary">Read More</a>
                             </div>
                         </div>
+                        <br /><br />
 
                         <div class="blog-post">
                             <div class="blog-img">
-                                <img src="images/blog2.jpg" alt="Web Development Trends">
+                                <img src="images/blog2.png" alt="Web Development Trends">
                             </div>
                             <div class="blog-content">
                                 <div class="blog-meta">
                                     <span class="blog-date"><i class="fas fa-calendar-alt"></i> April 28, 2023</span>
                                     <span class="blog-category"><i class="fas fa-folder"></i> Web Development</span>
-                                </div>
+                                </div><br />
                                 <h2>Web Development Trends in 2023</h2>
-                                <p>The web development landscape is constantly evolving, with new technologies and frameworks emerging each year. In this post, I'll discuss the most important trends in web development for 2023 and how they're shaping the future of the web.</p>
-                                <p>From serverless architectures to WebAssembly, we'll explore the technologies that are revolutionizing how we build and deploy web applications.</p>
+                                <p>The web development landscape is constantly evolving, with new technologies and frameworks emerging each year. In 
+                                    this post, I'll discuss the most important trends in web development for 2023 and how they're shaping the future of 
+                                    the web.</p>
+                                <p>From serverless architectures to WebAssembly, we'll explore the technologies that are revolutionizing how we build and 
+                                    deploy web applications.</p>
+                                    <br />
                                 <a href="blog-post.html" class="btn btn-primary">Read More</a>
                             </div>
-                        </div>
+                        </div> <br /><br />
 
                         <div class="blog-post">
                             <div class="blog-img">
@@ -91,37 +101,44 @@
                                 <div class="blog-meta">
                                     <span class="blog-date"><i class="fas fa-calendar-alt"></i> March 12, 2023</span>
                                     <span class="blog-category"><i class="fas fa-folder"></i> Mobile Development</span>
-                                </div>
+                                </div><br />
                                 <h2>Native vs. Cross-Platform Mobile Development</h2>
-                                <p>When starting a mobile app project, one of the first decisions you'll face is whether to go with native or cross-platform development. Each approach has its advantages and trade-offs, and the right choice depends on your specific requirements.</p>
-                                <p>In this post, I'll compare native development (using Swift/Objective-C for iOS and Kotlin/Java for Android) with cross-platform frameworks like React Native and Flutter.</p>
+                                <p>When starting a mobile app project, one of the first decisions you'll face is whether to go with native or cross-platform 
+                                    development. Each approach has its advantages and trade-offs, and the right choice depends on your specific requirements.
+                                </p>
+                                <p>In this post, I'll compare native development (using Swift/Objective-C for iOS and Kotlin/Java for Android) with 
+                                    cross-platform frameworks like React Native and Flutter.</p>
+                                    <br />
                                 <a href="blog-post.html" class="btn btn-primary">Read More</a>
                             </div>
-                        </div>
+                        </div> <br /><br />
 
                         <div class="blog-post">
                             <div class="blog-img">
-                                <img src="images/blog4.jpg" alt="Database Systems">
+                                <img src="images/blog4.png" alt="Database Systems">
                             </div>
                             <div class="blog-content">
                                 <div class="blog-meta">
                                     <span class="blog-date"><i class="fas fa-calendar-alt"></i> February 5, 2023</span>
                                     <span class="blog-category"><i class="fas fa-folder"></i> Databases</span>
-                                </div>
+                                </div><br />
                                 <h2>SQL vs. NoSQL: Choosing the Right Database</h2>
-                                <p>Database selection is a critical decision in application architecture. The choice between SQL and NoSQL databases can significantly impact your application's performance, scalability, and development complexity.</p>
-                                <p>This post explores the key differences between SQL and NoSQL databases, their respective strengths and weaknesses, and provides guidance on selecting the right database for your specific use case.</p>
+                                <p>Database selection is a critical decision in application architecture. The choice between SQL and NoSQL databases can 
+                                    significantly impact your application's performance, scalability, and development complexity.</p>
+                                <p>This post explores the key differences between SQL and NoSQL databases, their respective strengths and weaknesses, 
+                                    and provides guidance on selecting the right database for your specific use case.</p>
+                                    <br />
                                 <a href="blog-post.html" class="btn btn-primary">Read More</a>
                             </div>
                         </div>
 
-                        <div class="pagination">
+                        <!-- <div class="pagination">
                             <a href="#" class="active">1</a>
                             <a href="#">2</a>
                             <a href="#">3</a>
                             <a href="#" class="next">Next <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
+                        </div>  -->
+                    </div> <br />
 
                     <div class="blog-sidebar">
                         <div class="sidebar-widget search-widget">
@@ -130,7 +147,7 @@
                                 <input type="text" placeholder="Search...">
                                 <button type="submit"><i class="fas fa-search"></i></button>
                             </form>
-                        </div>
+                        </div> <br /> <br />
 
                         <div class="sidebar-widget categories-widget">
                             <h3>Categories</h3>
@@ -142,32 +159,34 @@
                                 <li><a href="#">UI/UX Design <span>(6)</span></a></li>
                                 <li><a href="#">Programming Tips <span>(7)</span></a></li>
                             </ul>
-                        </div>
+                        </div> <br /> <br />
 
                         <div class="sidebar-widget recent-posts-widget">
                             <h3>Recent Posts</h3>
                             <div class="recent-posts">
                                 <div class="recent-post">
                                     <div class="post-img">
-                                        <img src="images/blog1-small.jpg" alt="Machine Learning Basics">
+                                        <img src="images/blog1.png" alt="Machine Learning Basics">
                                     </div>
                                     <div class="post-info">
                                         <h4><a href="blog-post.html">Getting Started with Machine Learning</a></h4>
                                         <span class="post-date">May 15, 2023</span>
-                                    </div>
+                                    </div> 
                                 </div>
+                                 <br />
                                 <div class="recent-post">
                                     <div class="post-img">
-                                        <img src="images/blog2-small.jpg" alt="Web Development Trends">
+                                        <img src="images/blog2.png" alt="Web Development Trends">
                                     </div>
                                     <div class="post-info">
                                         <h4><a href="blog-post.html">Web Development Trends in 2023</a></h4>
                                         <span class="post-date">April 28, 2023</span>
                                     </div>
                                 </div>
+                                <br />
                                 <div class="recent-post">
                                     <div class="post-img">
-                                        <img src="images/blog3-small.jpg" alt="Mobile App Development">
+                                        <img src="images/blog3.jpg" alt="Mobile App Development">
                                     </div>
                                     <div class="post-info">
                                         <h4><a href="blog-post.html">Native vs. Cross-Platform Mobile Development</a></h4>
@@ -175,23 +194,23 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> <br /> <br />
 
                         <div class="sidebar-widget tags-widget">
                             <h3>Tags</h3>
                             <div class="tags">
-                                <a href="#">HTML</a>
-                                <a href="#">CSS</a>
-                                <a href="#">JavaScript</a>
-                                <a href="#">React</a>
-                                <a href="#">Python</a>
-                                <a href="#">Machine Learning</a>
-                                <a href="#">Web Development</a>
-                                <a href="#">Mobile Apps</a>
-                                <a href="#">UI/UX</a>
+                                <a href="#">HTML,</a>
+                                <a href="#">CSS,</a>
+                                <a href="#">JavaScript,</a>
+                                <a href="#">React,</a>
+                                <a href="#">Python,</a>
+                                <a href="#">Machine Learning,</a>
+                                <a href="#">Web Development,</a>
+                                <a href="#">Mobile Apps,</a>
+                                <a href="#">UI/UX,</a>
                                 <a href="#">Database</a>
                             </div>
-                        </div>
+                        </div> <br /> <br />
                     </div>
                 </div>
             </div>
@@ -218,19 +237,22 @@
                 <div class="footer-social">
                     <h3>Connect With Me</h3>
                     <div class="social-icons">
-                        <a href="#"><i class="fab fa-github"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="https://github.com/farrakhanwahab"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/farrakhan-wahab-227a15241?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"><i class="fab fa-linkedin"></i></a>
+                        <a href="mailto:wahabfarrakhan@gmail.com"><i class="fas fa-envelope"></i></a>
+                        <a href="https://www.instagram.com/faa.gw?igsh=YzdlazYzcms2MTdn&utm_source=qr"><i class="fab fa-instagram"></i></a>
+
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2023 DevStudent. All Rights Reserved.</p>
+                <p>&copy; 2025 FW. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
 
     <script src="js/script.js"></script>
+    <script src="js/page-transitions.js"></script>
+    <script src="js/theme-toggle.js"></script>
 </body>
 </html>
