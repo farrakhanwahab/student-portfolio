@@ -663,7 +663,7 @@ body.dark-mode .form-group textarea {
 Footer
 ======================
 */
-footer {
+/* footer {
     background-color: var(--dark-color);
     color: var(--light-color);
     padding: 4rem 0 1rem;
@@ -753,7 +753,7 @@ footer {
 
 .footer-bottom p {
     color: #b0b0b0;
-}
+} */
 
 /* 
 ======================
