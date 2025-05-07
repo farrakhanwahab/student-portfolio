@@ -43,7 +43,7 @@ body.dark-mode {
 
 .container {
     width: 100%;
-    max-width: 1700px;
+    max-width: 1500px;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -1170,7 +1170,7 @@ body.dark-mode .service-card {
 }
 
 .service-icon {
-    font-size: 3rem;
+    font-size: 12px;
     color: var(--primary-color);
     margin-bottom: 1.5rem;
 }

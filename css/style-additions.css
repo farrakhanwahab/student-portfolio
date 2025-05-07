@@ -25,27 +25,34 @@
     overflow: hidden;
   }
   
-  /* Main content wrapper for transitions */
-  .page-wrapper {
-    position: relative;
+  /* Replace with these more targeted transition styles: */
+.page-transition-container {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    min-height: 100vh;
-    overflow-x: hidden;
-    perspective: 1200px; /* Add perspective for 3D effects */
-  }
-  
-  /* Main content slide animation with enhanced effects */
-  main.page {
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    transition: transform var(--page-transition-duration) var(--easing-page-transition),
-                opacity var(--page-transition-duration) var(--easing-page-transition);
-    transform: translateX(0) scale(1);
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+/* Animation for page content */
+.main-content {
+    transition: opacity 0.4s var(--easing-smooth),
+                transform 0.4s var(--easing-smooth);
+}
+
+/* Initial state */
+.page-load .main-content {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+/* Active state */
+.page-loaded .main-content {
     opacity: 1;
-    transform-origin: center;
-    will-change: transform, opacity; /* Optimize for animation performance */
-  }
+    transform: translateY(0);
+}
   
   /* Slide out to the right with subtle scale and rotation */
   main.page.slide-out {
@@ -1023,3 +1030,60 @@ body.dark-mode .tags a {
     }
 }
 
+/* ======================
+   Service Features Styling
+   ====================== */
+   .service-features {
+    margin: 1.5rem 0;
+    padding: 0;
+    list-style: none;
+}
+
+.service-features li {
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 0.8rem;
+    color: var(--text-color-light);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    transition: all 0.3s ease;
+}
+
+.service-features li:hover {
+    color: var(--text-color);
+    transform: translateX(5px);
+}
+
+.service-features li i.fa-check {
+    position: absolute;
+    left: 0;
+    top: 0.2rem;
+    font-size: 0.9rem;
+    color: var(--primary-color);
+    background: rgba(138, 43, 226, 0.1);
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.service-features li:hover i.fa-check {
+    background: rgba(138, 43, 226, 0.2);
+    transform: scale(1.1);
+}
+
+/* Dark mode adjustments */
+body.dark-mode .service-features li {
+    color: var(--text-color-light);
+}
+
+body.dark-mode .service-features li:hover {
+    color: var(--text-color);
+}
+
+body.dark-mode .service-features li i.fa-check {
+    background: rgba(138, 43, 226, 0.2);
+}

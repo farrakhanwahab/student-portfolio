@@ -90,7 +90,7 @@
     display: none; /* Chrome, Safari, Opera */
 }
 
-/* Additional container for ensuring full-width */
+Additional container for ensuring full-width
 .testimonials-wrapper {
     width: 100vw;
     background-color: var(--card-bg);
@@ -104,11 +104,22 @@
     margin-right: -50vw;
 }
 
+/* .testimonials-wrapper {
+    background-color: var(--card-bg);
+    padding: 0;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+} */
+
+
+
 /* Reset any potential container margins from parent elements */
-.container, 
+/* .container, 
 .container-fluid,
 .content-wrapper,
-main, 
+main,  */
+
 section {
     max-width: 100%;
 }
