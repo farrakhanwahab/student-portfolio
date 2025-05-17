@@ -1,2 +1,2 @@
 # student-portfolio
-A frontend portfolio webiste using only HTML5, CSS and JS
+A frontend portfolio website using only HTML5, CSS and JS
