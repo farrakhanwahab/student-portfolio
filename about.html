@@ -10,235 +10,353 @@
     <link rel="stylesheet" href="css/style-additions.css">
 </head>
 <body class="light-mode">
-    <header>
-        <div class="container">
-            <div class="logo">
-                <h1>Dev<span>Student</span></h1>
-            </div>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html" class="active">About</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="resume.html">Resume</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="testimonials.html">Testimonials</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-                <div class="theme-toggle" aria-label="Toggle dark mode">
-                    <!-- Icons will be added via JavaScript -->
-                </div>
-                <div class="hamburger">
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                </div>
-            </nav>
-        </div>
-    </header>
+    <!-- Header Component Placeholder -->
+    <div id="header-placeholder"></div>
 
     <main>
-        <section class="page-header">
+        <!-- Hero Section -->
+        <section class="about-hero">
             <div class="container">
-                <h1>About Me</h1>
-                <div class="breadcrumb">
-                    <a href="index.html">Home</a> / <span>About</span>
-                </div>
-            </div>
-        </section>
-
-        <section class="about-me">
-            <div class="container">
-                <div class="about-content">
-                    <div class="about-image animate-fade-in">
-                        <img src="images/hero-image.JPG" alt="Farrakhan Wahab - CS Student">
-                    </div>
-                    <div class="about-text">
-                        <h2 class="animate-text">Who Am I?</h2>
-                        <h3 class="animate-text delay-1">Information Technology Student & Web Developer</h3>
-                        <p class="animate-text delay-2">I'm Farrkhan Wahab, a passionate Information Technology student currently pursuing my Bachelor's degree at GIMPA. 
-                            With a focus on web development and artificial intelligence, I'm constantly exploring new technologies and building projects that solve 
-                            real-world problems.</p>
-                        <p class="animate-text delay-3">My journey in programming began when I was 14, creating simple games and websites. That early passion has 
-                            evolved into a deep love for software development and a commitment to creating elegant, efficient solutions.</p>
-                        <div class="personal-info animate-text delay-4">
-                            <div class="info-item">
-                                <span>Name:</span> Farrkhan Wahab
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1 class="animate-text">About Me</h1>
+                        <p class="animate-text delay-1">Passionate Information Technology student and web developer from Ghana, creating innovative digital solutions.</p>
+                        <div class="hero-stats animate-text delay-2">
+                            <div class="stat-item">
+                                <span class="stat-number">3+</span>
+                                <span class="stat-label">Years Experience</span>
                             </div>
-                            <div class="info-item">
-                                <span>Age:</span> 24
+                            <div class="stat-item">
+                                <span class="stat-number">50+</span>
+                                <span class="stat-label">Projects Completed</span>
                             </div>
-                            <div class="info-item">
-                                <span>Email:</span> wahabfarrakhan@gmail.com
-                            </div>
-                            <div class="info-item">
-                                <span>Location:</span> Greater Accra, Ghana
-                            </div>
-                            <div class="info-item">
-                                <span>Study:</span> GIMPA
-                            </div>
-                            <div class="info-item">Info
-                                <span>Degree:</span> Bachelor of Science in Information Technology
+                            <div class="stat-item">
+                                <span class="stat-number">15+</span>
+                                <span class="stat-label">Technologies</span>
                             </div>
                         </div>
-                        <div class="about-btns animate-text delay-5">
-                            <a href="resume.html" class="btn btn-primary">View Resume</a>
-                            <a href="contact.html" class="btn btn-secondary">Contact Me</a>
+                    </div>
+                    <div class="hero-image animate-fade-in">
+                        <img src="images/hero-image.JPG" alt="Farrakhan Wahab">
+                        <div class="image-overlay">
+                            <div class="overlay-content">
+                                <i class="fas fa-code"></i>
+                                <span>Full Stack Developer</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="education-experience">
+        <!-- Personal Info Section -->
+        <section class="personal-info-section">
+            <div class="container">
+                <div class="info-grid">
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Education</h3>
+                            <p>Bachelor of Science in Information Technology</p>
+                            <span class="info-detail">GIMPA • 2021 - 2025</span>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Location</h3>
+                            <p>Greater Accra, Ghana</p>
+                            <span class="info-detail">Available for remote work</span>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Experience</h3>
+                            <p>3+ Years in Web Development</p>
+                            <span class="info-detail">Full Stack & Mobile Apps</span>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Achievements</h3>
+                            <p>GPA: 3.9/4.0</p>
+                            <span class="info-detail">Dean's List • Valedictorian</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Story Section -->
+        <section class="story-section">
+            <div class="container">
+                <div class="story-content">
+                    <div class="story-text">
+                        <h2 class="section-title">My Journey</h2>
+                        <div class="story-paragraphs">
+                            <p class="story-p">I'm Farrakhan Wahab, a passionate Information Technology student currently pursuing my Bachelor's degree at GIMPA. My journey in programming began when I was 14, creating simple games and websites. That early passion has evolved into a deep love for software development and a commitment to creating elegant, efficient solutions.</p>
+                            
+                            <p class="story-p">With a focus on web development and artificial intelligence, I'm constantly exploring new technologies and building projects that solve real-world problems. I believe in the power of technology to transform lives and create positive change in our communities.</p>
+                            
+                            <p class="story-p">When I'm not coding, you can find me hiking through nature trails, reading science fiction novels, or exploring the latest developments in AI and machine learning. I'm always eager to learn new skills and take on challenging projects that push my boundaries.</p>
+                        </div>
+                        <div class="story-cta">
+                            <a href="resume.html" class="btn btn-primary">View My Resume</a>
+                            <a href="portfolio.html" class="btn btn-secondary">See My Work</a>
+                        </div>
+                    </div>
+                    <div class="story-image">
+                        <div class="image-container">
+                            <img src="images/hero-image.JPG" alt="Farrakhan Wahab">
+                            <div class="image-badge">
+                                <i class="fas fa-heart"></i>
+                                <span>Passionate Developer</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="skills-section">
+            <div class="container">
+                <h2 class="section-title">Technical Expertise</h2>
+                <p class="section-subtitle">A comprehensive overview of my technical skills and proficiency levels</p>
+                
+                <div class="skills-categories">
+                    <!-- Frontend Development -->
+                    <div class="skill-category">
+                        <div class="category-header">
+                            <i class="fas fa-palette"></i>
+                            <h3>Frontend Development</h3>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">HTML5 & CSS3</span>
+                                    <span class="skill-percentage">98%</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="progress-bar" data-percentage="98"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">JavaScript (ES6+)</span>
+                                    <span class="skill-percentage">95%</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="progress-bar" data-percentage="95"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">React.js</span>
+                                    <span class="skill-percentage">90%</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="progress-bar" data-percentage="90"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Vue.js</span>
+                                    <span class="skill-percentage">85%</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="progress-bar" data-percentage="85"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Backend Development -->
+                    <div class="skill-category">
+                        <div class="category-header">
+                            <i class="fas fa-server"></i>
+                            <h3>Backend Development</h3>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Node.js</span>
+                                    <span class="skill-percentage">88%</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="progress-bar" data-percentage="88"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Python</span>
+                                    <span class="skill-percentage">90%</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="progress-bar" data-percentage="90"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Java</span>
+                                    <span class="skill-percentage">85%</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="progress-bar" data-percentage="85"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">PHP</span>
+                                    <span class="skill-percentage">75%</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="progress-bar" data-percentage="75"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- AI & Machine Learning -->
+                    <div class="skill-category">
+                        <div class="category-header">
+                            <i class="fas fa-brain"></i>
+                            <h3>AI & Machine Learning</h3>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">TensorFlow</span>
+                                    <span class="skill-percentage">75%</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="progress-bar" data-percentage="75"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Scikit-learn</span>
+                                    <span class="skill-percentage">80%</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="progress-bar" data-percentage="80"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">OpenAI API</span>
+                                    <span class="skill-percentage">85%</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="progress-bar" data-percentage="85"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Data Analysis</span>
+                                    <span class="skill-percentage">80%</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="progress-bar" data-percentage="80"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline Section -->
+        <section class="timeline-section">
             <div class="container">
                 <h2 class="section-title">Education & Experience</h2>
+                <p class="section-subtitle">My academic journey and professional experience</p>
+                
                 <div class="timeline">
                     <div class="timeline-item">
                         <div class="timeline-dot"></div>
                         <div class="timeline-content">
-                            <h3>GIMPA</h3>
-                            <span class="date">2021 - 2025</span>
-                            <p>Bachelor of Science in Information Technology</p>
-                            <p>GPA: 3.9/4.0</p>
-                            <p>Relevant Coursework: Data Structures, Algorithms, Machine Learning, Web Development, Database Systems</p>
+                            <div class="timeline-header">
+                                <h3>Bachelor of Science in Information Technology</h3>
+                                <span class="timeline-date">2021 - 2025</span>
+                            </div>
+                            <div class="timeline-organization">GIMPA</div>
+                            <div class="timeline-details">
+                                <p>GPA: 3.9/4.0 • Dean's List</p>
+                                <p>Relevant Coursework: Data Structures, Algorithms, Machine Learning, Web Development, Database Systems</p>
+                                <div class="timeline-achievements">
+                                    <span class="achievement">President of IT Club</span>
+                                    <span class="achievement">Research Assistant</span>
+                                    <span class="achievement">Academic Excellence Award</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <h3>Web Development Intern</h3>
-                            <span class="date">Summer 2022</span>
-                            <p>TechStart Inc., Kumasi, Ghana</p>
-                            <p>Developed responsive web applications using HTML, CSS, JavaScript, and React</p>
-                            <p>Collaborated with senior developers to implement new features and fix bugs</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <h3>Research Assistant</h3>
-                            <span class="date">2021 - 2022</span>
-                            <p>AI Research Lab, Stanford University</p>
-                            <p>Assisted in developing machine learning models for natural language processing</p>
-                            <p>Co-authored a research paper on sentiment analysis techniques</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <h3>WASSCE Certificate</h3>
-                            <span class="date">2016 - 2019</span>
-                            <p>Mfantsipim School, Cape Coast</p>
-                            <p>Valedictorian</p>
-                            <p>President of Information Technology Club</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <section class="skills-detailed">
-            <div class="container">
-                <h2 class="section-title">My Skills</h2>
-                <div class="skills-container">
-                    <div class="skills-category">
-                        <h3>Programming Languages</h3>
-                        <div class="skills-grid">
-                            <div class="skill-item">
-                                <div class="skill-name">JavaScript</div>
-                                <div class="skill-bar">
-                                    <div class="skill-level" style="width: 95%"></div>
-                                </div>
-                                <div class="skill-percent">95%</div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3>Web Development Intern</h3>
+                                <span class="timeline-date">Summer 2022</span>
                             </div>
-                            <div class="skill-item">
-                                <div class="skill-name">Python</div>
-                                <div class="skill-bar">
-                                    <div class="skill-level" style="width: 90%"></div>
+                            <div class="timeline-organization">TechStart Inc., Kumasi, Ghana</div>
+                            <div class="timeline-details">
+                                <p>Developed responsive web applications using HTML, CSS, JavaScript, and React</p>
+                                <p>Collaborated with senior developers to implement new features and fix bugs</p>
+                                <div class="timeline-achievements">
+                                    <span class="achievement">Best Intern Award</span>
+                                    <span class="achievement">3 Projects Delivered</span>
                                 </div>
-                                <div class="skill-percent">90%</div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-name">Java</div>
-                                <div class="skill-bar">
-                                    <div class="skill-level" style="width: 85%"></div>
-                                </div>
-                                <div class="skill-percent">85%</div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-name">C++</div>
-                                <div class="skill-bar">
-                                    <div class="skill-level" style="width: 75%"></div>
-                                </div>
-                                <div class="skill-percent">75%</div>
                             </div>
                         </div>
                     </div>
-                    <div class="skills-category">
-                        <h3>Web Technologies</h3>
-                        <div class="skills-grid">
-                            <div class="skill-item">
-                                <div class="skill-name">HTML5</div>
-                                <div class="skill-bar">
-                                    <div class="skill-level" style="width: 98%"></div>
-                                </div>
-                                <div class="skill-percent">98%</div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3>Research Assistant</h3>
+                                <span class="timeline-date">2021 - 2022</span>
                             </div>
-                            <div class="skill-item">
-                                <div class="skill-name">CSS3</div>
-                                <div class="skill-bar">
-                                    <div class="skill-level" style="width: 95%"></div>
+                            <div class="timeline-organization">AI Research Lab, Stanford University</div>
+                            <div class="timeline-details">
+                                <p>Assisted in developing machine learning models for natural language processing</p>
+                                <p>Co-authored a research paper on sentiment analysis techniques</p>
+                                <div class="timeline-achievements">
+                                    <span class="achievement">Published Research Paper</span>
+                                    <span class="achievement">Conference Presentation</span>
                                 </div>
-                                <div class="skill-percent">95%</div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-name">React</div>
-                                <div class="skill-bar">
-                                    <div class="skill-level" style="width: 90%"></div>
-                                </div>
-                                <div class="skill-percent">90%</div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-name">Node.js</div>
-                                <div class="skill-bar">
-                                    <div class="skill-level" style="width: 85%"></div>
-                                </div>
-                                <div class="skill-percent">85%</div>
                             </div>
                         </div>
                     </div>
-                    <div class="skills-category">
-                        <h3>Other Skills</h3>
-                        <div class="skills-grid">
-                            <div class="skill-item">
-                                <div class="skill-name">Git</div>
-                                <div class="skill-bar">
-                                    <div class="skill-level" style="width: 90%"></div>
-                                </div>
-                                <div class="skill-percent">90%</div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3>WASSCE Certificate</h3>
+                                <span class="timeline-date">2016 - 2019</span>
                             </div>
-                            <div class="skill-item">
-                                <div class="skill-name">Database (SQL/NoSQL)</div>
-                                <div class="skill-bar">
-                                    <div class="skill-level" style="width: 85%"></div>
+                            <div class="timeline-organization">Mfantsipim School, Cape Coast</div>
+                            <div class="timeline-details">
+                                <p>Valedictorian • President of Information Technology Club</p>
+                                <p>Led school's first coding competition and established IT mentorship program</p>
+                                <div class="timeline-achievements">
+                                    <span class="achievement">Valedictorian</span>
+                                    <span class="achievement">IT Club President</span>
+                                    <span class="achievement">Academic Excellence</span>
                                 </div>
-                                <div class="skill-percent">85%</div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-name">UI/UX Design</div>
-                                <div class="skill-bar">
-                                    <div class="skill-level" style="width: 80%"></div>
-                                </div>
-                                <div class="skill-percent">80%</div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-name">Machine Learning</div>
-                                <div class="skill-bar">
-                                    <div class="skill-level" style="width: 75%"></div>
-                                </div>
-                                <div class="skill-percent">75%</div>
                             </div>
                         </div>
                     </div>
@@ -246,150 +364,98 @@
             </div>
         </section>
 
-        <section class="interests">
+        <!-- Interests Section -->
+        <section class="interests-section">
             <div class="container">
-                <h2 class="section-title">My Interests</h2>
-                <div class="interests-container">
+                <h2 class="section-title">Beyond Coding</h2>
+                <p class="section-subtitle">My interests and hobbies that keep me inspired</p>
+                
+                <div class="interests-grid">
                     <div class="interest-card">
-                        <i class="fas fa-laptop-code"></i>
-                        <h3>Coding</h3>
-                        <p>Building applications and solving complex problems</p>
+                        <div class="interest-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <div class="interest-content">
+                            <h3>Coding & Development</h3>
+                            <p>Building applications and solving complex problems. I love exploring new technologies and contributing to open-source projects.</p>
+                            <div class="interest-tags">
+                                <span class="interest-tag">Open Source</span>
+                                <span class="interest-tag">Problem Solving</span>
+                                <span class="interest-tag">Innovation</span>
+                            </div>
+                        </div>
                     </div>
+
                     <div class="interest-card">
-                        <i class="fas fa-robot"></i>
-                        <h3>AI & ML</h3>
-                        <p>Exploring artificial intelligence and machine learning</p>
+                        <div class="interest-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="interest-content">
+                            <h3>AI & Machine Learning</h3>
+                            <p>Exploring artificial intelligence and machine learning. I'm fascinated by how AI can transform various industries.</p>
+                            <div class="interest-tags">
+                                <span class="interest-tag">Deep Learning</span>
+                                <span class="interest-tag">NLP</span>
+                                <span class="interest-tag">Computer Vision</span>
+                            </div>
+                        </div>
                     </div>
+
                     <div class="interest-card">
-                        <i class="fas fa-hiking"></i>
-                        <h3>Hiking</h3>
-                        <p>Exploring nature and challenging trails</p>
+                        <div class="interest-icon">
+                            <i class="fas fa-hiking"></i>
+                        </div>
+                        <div class="interest-content">
+                            <h3>Hiking & Nature</h3>
+                            <p>Exploring nature trails and challenging hikes. It helps me clear my mind and find inspiration for creative solutions.</p>
+                            <div class="interest-tags">
+                                <span class="interest-tag">Adventure</span>
+                                <span class="interest-tag">Photography</span>
+                                <span class="interest-tag">Fitness</span>
+                            </div>
+                        </div>
                     </div>
+
                     <div class="interest-card">
-                        <i class="fas fa-book"></i>
-                        <h3>Reading</h3>
-                        <p>Science fiction and technical books</p>
+                        <div class="interest-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <div class="interest-content">
+                            <h3>Reading & Learning</h3>
+                            <p>Science fiction and technical books. I believe continuous learning is key to staying relevant in the tech industry.</p>
+                            <div class="interest-tags">
+                                <span class="interest-tag">Sci-Fi</span>
+                                <span class="interest-tag">Tech Books</span>
+                                <span class="interest-tag">Self-Development</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact CTA Section -->
+        <section class="contact-cta">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Ready to Work Together?</h2>
+                    <p>Let's discuss your project and how I can help bring your ideas to life with cutting-edge technology solutions.</p>
+                    <div class="cta-buttons">
+                        <a href="contact.html" class="btn btn-primary">Get In Touch</a>
+                        <a href="portfolio.html" class="btn btn-secondary">View My Work</a>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <!-- Company Info -->
-                <div class="footer-logo">
-                    <h2>Dev<span>Student</span></h2>
-                    <div class="section-divider"></div>
-                    <p>Building the future, one line of code at a time. Passionate about web development, software engineering, and creating digital experiences that matter.</p>
-                    <div class="office-hours">
-                        <h3>Office Hours</h3>
-                        <p>Monday - Friday: 9AM - 6PM</p>
-                        <p>Weekend: By Appointment</p>
-                    </div>
-                </div>
-    
-                <!-- Quick Links -->
-                <div class="footer-links">
-                    <h3>Quick Links</h3>
-                    <div class="section-divider"></div>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Me</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="portfolio.html">Portfolio</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-    
-                <!-- Services -->
-                <div class="footer-services">
-                    <h3>Services</h3>
-                    <div class="section-divider"></div>
-                    <ul>
-                        <li><a href="services.html#webdev">Web Development</a></li>
-                        <li><a href="services.html#mobiledev">Mobile App Development</a></li>
-                        <li><a href="services.html#uiux">UI/UX Design</a></li>
-                        <li><a href="services.html#consulting">Tech Consulting</a></li>
-                        <li><a href="services.html#seo">SEO Optimization</a></li>
-                    </ul>
-                </div>
-    
-                <!-- Contact Info -->
-                <div class="footer-contact">
-                    <h3>Get In Touch</h3>
-                    <div class="section-divider"></div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="contact-text">
-                            212 Sweetlove Street<br>
-                            Greater Accra, Ghana
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-text">
-                            wahabfarrakhan@gmail.com
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone-alt"></i>
-                        </div>
-                        <div class="contact-text">
-                            +233 (0) 500-428-501
-                        </div>
-                    </div>
-    
-                    <!-- Social Media -->
-                    <h3>Connect With Me</h3>
-                    <div class="social-icons">
-                        <a href="https://github.com/farrakhanwahab"><i class="fab fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/farrakhan-wahab-227a15241?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"><i class="fab fa-linkedin"></i></a>
-                        <a href="mailto:wahabfarrakhan@gmail.com"><i class="fas fa-envelope"></i></a>
-                        <a href="https://www.instagram.com/faa.gw?igsh=YzdlazYzcms2MTdn&utm_source=qr"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Newsletter Section -->
-            <div class="newsletter-section">
-                <div class="newsletter-container">
-                    <div class="newsletter-text">
-                        <h3>Subscribe to My Newsletter</h3>
-                        <p>Stay updated with my latest projects, tech insights, and coding tips.</p>
-                    </div>
-                    <form class="newsletter-form">
-                        <input type="email" placeholder="Enter your email" class="newsletter-input" required>
-                        <button type="submit" class="newsletter-button">Subscribe</button>
-                    </form>
-                </div>
-            </div>
-            
-            <!-- Footer Bottom -->
-            <div class="footer-bottom">
-                <div class="footer-copyright">
-                    <p>&copy; 2025 FW. All Rights Reserved.</p>
-                    <p>Developed by Farrakhan Wahab</p>
-                </div>
-                <div class="footer-legal">
-                    <a href="privacy.html">Privacy Policy</a>
-                    <a href="terms.html">Terms of Service</a>
-                    <a href="sitemap.html">Sitemap</a>
-                    <a href="contact.html#faq">FAQ</a>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <!-- Footer Component Placeholder -->
+    <div id="footer-placeholder"></div>
 
     <script src="js/script.js"></script>
     <script src="js/page-transitions.js"></script>
     <script src="js/theme-toggle.js"></script>
+    <script src="js/skills-animation.js"></script>
+    <script src="js/components.js"></script>
 </body>
 </html>

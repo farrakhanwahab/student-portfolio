@@ -12,11 +12,18 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }, { threshold: 0.3 });
 
-    // Observe the skills section
-    const skillsSection = document.querySelector('.skills');
+    // Observe the skills section (check both .skills and .skills-section)
+    const skillsSection = document.querySelector('.skills') || document.querySelector('.skills-section');
     if (skillsSection) {
         skillsObserver.observe(skillsSection);
     }
+    
+    // Fallback: Trigger animation after a delay if intersection observer doesn't work
+    setTimeout(() => {
+        if (progressBars.length > 0 && progressBars[0].style.width === '0px') {
+            animateProgressBars();
+        }
+    }, 2000);
 
     function animateProgressBars() {
         progressBars.forEach(bar => {
