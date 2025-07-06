@@ -922,84 +922,7 @@ body.dark-mode .service-price {
 
 
 
-/* 
-======================
-Contact Preview
-======================
-*/
-.contact-preview {
-    padding: 5rem 0;
-    background-color: var(--light-color);
-}
 
-body.dark-mode .contact-preview {
-    background-color: var(--dark-color);
-}
-
-.contact-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-    align-items: center;
-}
-
-.contact-info {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
-.contact-item {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-.contact-item i {
-    font-size: 1.5rem;
-    color: var(--primary-color);
-}
-
-.contact-form {
-    background-color: var(--gray-color);
-    padding: 2rem;
-    border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
-}
-
-body.dark-mode .contact-form {
-    background-color: #1e1e1e;
-}
-
-.form-group {
-    margin-bottom: 1.5rem;
-}
-
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 12px 15px;
-    border: 1px solid var(--border-color);
-    border-radius: var(--border-radius);
-    background-color: var(--light-color);
-    color: var(--text-color);
-    font-family: 'Poppins', sans-serif;
-    transition: var(--transition);
-}
-
-body.dark-mode .form-group input,
-body.dark-mode .form-group textarea {
-    background-color: #2a2a2a;
-    color: var(--text-color);
-    border-color: #3a3a3a;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-    outline: none;
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(138, 43, 226, 0.2);
-}
 
 /* 
 ======================
@@ -2835,13 +2758,7 @@ body.dark-mode .language-item {
             height: auto;
         }
         
-        .contact-container {
-            gap: 2.5rem;
-        }
-        
-        .contact-form {
-            padding: 2rem;
-        }
+
         
         .skills-categories {
             grid-template-columns: repeat(2, 1fr);
@@ -3057,48 +2974,7 @@ body.dark-mode .language-item {
             align-items: flex-start;
         }
         
-        .contact-container {
-            grid-template-columns: 1fr;
-            gap: 2rem;
-        }
-        
-        .contact-info {
-            text-align: center;
-            order: 2;
-        }
-        
-        .contact-item {
-            margin-bottom: 1.5rem;
-            justify-content: center;
-        }
-        
-        .contact-item i {
-            font-size: 1.3rem;
-        }
-        
-        .contact-item p {
-            font-size: 1rem;
-        }
-        
-        .contact-form {
-            order: 1;
-            padding: 1.5rem;
-        }
-        
-        .form-group {
-            margin-bottom: 1rem;
-        }
-        
-        .form-group input,
-        .form-group textarea {
-            padding: 10px 12px;
-            font-size: 0.9rem;
-        }
-        
-        .contact-form .btn {
-            width: 100%;
-            padding: 12px;
-        }
+
     
         .hero .container {
             grid-template-columns: 1fr;
