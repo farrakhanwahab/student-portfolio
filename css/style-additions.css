@@ -3222,7 +3222,7 @@ footer {
 
 .skill-level {
     height: 100%;
-    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    background: var(--primary-color);
     border-radius: 6px;
     width: 0;
     transition: width 1.5s ease;
@@ -3399,14 +3399,14 @@ footer {
 .progress-bar {
     flex: 1;
     height: 8px;
-    background: var(--bg-light);
+    background: var(--primary-color);
     border-radius: 4px;
     overflow: hidden;
 }
 
 .progress-fill {
     height: 100%;
-    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    background: var(--primary-color);
     border-radius: 4px;
     transition: width 1s ease;
 }
