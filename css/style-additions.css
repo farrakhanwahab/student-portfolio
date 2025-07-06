@@ -838,7 +838,7 @@ body.dark-mode .sidebar-widget {
     padding: 12px 15px;
     border: 1px solid var(--border-color);
     border-radius: 30px;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Avenir Next', 'Avenir', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     transition: all 0.3s ease;
 }
 
@@ -5764,7 +5764,7 @@ footer {
 
 
 
-/* Contact CTA Section */
+/* Contact CTA Section - USED IN ABOUT.HTML */
 .contact-cta {
     padding: 80px 0;
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
@@ -5901,5 +5901,20 @@ footer {
 }
 
 .testimonials-hero i {
+    color: #fff !important;
+}
+
+/* Force about hero section to purple background */
+.about-hero {
+    background: var(--primary-color) !important;
+}
+
+/* Make about hero section taller and all text white */
+.about-hero {
+    min-height: 480px;
+    padding-top: 140px;
+    padding-bottom: 120px;
+}
+.about-hero, .about-hero *, .about-hero h1, .about-hero h2, .about-hero h3, .about-hero h4, .about-hero h5, .about-hero h6, .about-hero p, .about-hero span, .about-hero .stat-number, .about-hero .stat-label {
     color: #fff !important;
 }

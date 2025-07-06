@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Animate elements on scroll
     const animateOnScroll = function() {
-        const elements = document.querySelectorAll('.animate-on-scroll');
+        const elements = document.querySelectorAll('.animate-on-scroll, .animate-text, .animate-fade-in');
         
         elements.forEach(element => {
             const elementPosition = element.getBoundingClientRect().top;
