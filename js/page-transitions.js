@@ -5,14 +5,8 @@
 document.addEventListener('DOMContentLoaded', function() {
     'use strict';
     
-    // Create animation elements
-    setupAnimationElements();
-    
     // Initialize animations
     initializeAnimations();
-    
-    // Setup enhanced page transitions
-    setupEnhancedPageTransitions();
     
     // Setup scroll animations
     setupScrollAnimations();
@@ -21,43 +15,12 @@ document.addEventListener('DOMContentLoaded', function() {
     setupInteractionAnimations();
 });
 
-/**
- * Create and append animation elements to the DOM
- */
-function setupAnimationElements() {
-    // Create page transition container and spinner
-    const transitionContainer = document.createElement('div');
-    transitionContainer.className = 'page-transition-container';
-    
-    const spinner = document.createElement('div');
-    spinner.className = 'loading-spinner';
-    
-    transitionContainer.appendChild(spinner);
-    document.body.appendChild(transitionContainer);
-    
-    // Create scroll indicator
-    const scrollIndicator = document.createElement('div');
-    scrollIndicator.className = 'scroll-indicator';
-    document.body.appendChild(scrollIndicator);
-}
+
 
 /**
  * Initialize animations when the page loads
  */
 function initializeAnimations() {
-    // Hide the loading spinner after 0.5 seconds
-    const transitionContainer = document.querySelector('.page-transition-container');
-    if (transitionContainer) {
-        setTimeout(() => {
-            transitionContainer.classList.add('hide');
-            
-            // Remove it from DOM after animation completes
-            setTimeout(() => {
-                transitionContainer.remove();
-            }, 300);
-        }, 500);
-    }
-    
     // Initialize skill bars if on a page with skills
     initializeSkillBars();
     
@@ -74,45 +37,7 @@ function initializeAnimations() {
     addAnimationClasses();
 }
 
-/**
- * Set up enhanced page transitions with loading spinner
- */
-function setupEnhancedPageTransitions() {
-    // Handle link clicks for page transitions
-    document.addEventListener('click', function(e) {
-        // Find closest anchor element
-        const anchor = e.target.closest('a');
-        
-        if (anchor) {
-            const href = anchor.getAttribute('href');
-            
-            // Only handle internal links that aren't hash links
-            if (href && 
-                href.indexOf('#') !== 0 && 
-                href.indexOf('http') !== 0 && 
-                !anchor.hasAttribute('download') && 
-                !anchor.hasAttribute('target')) {
-                
-                e.preventDefault();
-                
-                // Create and show loading spinner
-                const transitionContainer = document.createElement('div');
-                transitionContainer.className = 'page-transition-container';
-                
-                const spinner = document.createElement('div');
-                spinner.className = 'loading-spinner';
-                
-                transitionContainer.appendChild(spinner);
-                document.body.appendChild(transitionContainer);
-                
-                // Wait for spinner to be visible before navigating
-                setTimeout(() => {
-                    window.location.href = href;
-                }, 50);
-            }
-        }
-    });
-}
+
 
 
 /**
@@ -177,119 +102,13 @@ function initializeImageReveal() {
     }
 }
 
-/**
- * Set up enhanced page transitions with smooth sliding effect
- */
-function setupEnhancedPageTransitions() {
-    const main = document.querySelector('main');
-    const transitionOverlay = document.querySelector('.page-transition-overlay');
-    const transitionProgress = document.querySelector('.transition-progress');
-    
-    // Handle link clicks for page transitions
-    document.addEventListener('click', function(e) {
-        // Find closest anchor element
-        const anchor = e.target.closest('a');
-        
-        if (anchor) {
-            const href = anchor.getAttribute('href');
-            
-            // Only handle internal links that aren't hash links
-            if (href && 
-                href.indexOf('#') !== 0 && 
-                href.indexOf('http') !== 0 && 
-                !anchor.hasAttribute('download') && 
-                !anchor.hasAttribute('target')) {
-                
-                e.preventDefault();
-                
-                // Start transition animation
-                if (main) {
-                    main.classList.add('slide-out');
-                    main.classList.remove('active');
-                }
-                
-                // Show transition overlay with gradient effect
-                if (transitionOverlay) {
-                    transitionOverlay.classList.add('active');
-                }
-                
-                // Show transition progress
-                if (transitionProgress) {
-                    transitionProgress.classList.add('active');
-                }
-                
-                // Set navigation flag for the next page
-                sessionStorage.setItem('isNavigating', 'true');
-                
-                // Store the current scroll position
-                sessionStorage.setItem('scrollPosition', window.scrollY);
-                
-                // Wait for animation to complete before navigating
-                setTimeout(() => {
-                    window.location.href = href;
-                }, 800); // Match this to your page transition duration
-            }
-        }
-    });
-    
-    // Handle page load transition
-    window.addEventListener('pageshow', function(event) {
-        // Reset transition elements
-        if (transitionOverlay) {
-            transitionOverlay.classList.remove('active');
-        }
-        
-        if (transitionProgress) {
-            transitionProgress.classList.remove('active');
-        }
-        
-        // Restore scroll position if navigating
-        const scrollPosition = sessionStorage.getItem('scrollPosition');
-        if (scrollPosition) {
-            window.scrollTo(0, parseInt(scrollPosition));
-            sessionStorage.removeItem('scrollPosition');
-        }
-    });
-    
-    // Handle browser back/forward buttons
-    window.addEventListener('popstate', function() {
-        // Set navigation flag for the next page
-        sessionStorage.setItem('isNavigating', 'true');
-        
-        if (main) {
-            // Start slide out animation
-            main.classList.add('slide-out');
-            main.classList.remove('active');
-            
-            // Show transition overlay
-            if (transitionOverlay) {
-                transitionOverlay.classList.add('active');
-            }
-            
-            // Show transition progress
-            if (transitionProgress) {
-                transitionProgress.classList.add('active');
-            }
-        }
-    });
-}
+
 
 /**
  * Set up scroll-based animations
  */
 function setupScrollAnimations() {
-    // Update scroll indicator
-    const scrollIndicator = document.querySelector('.scroll-indicator');
-    
     window.addEventListener('scroll', function() {
-        // Update scroll indicator width
-        if (scrollIndicator) {
-            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            const scrolled = (winScroll / height) * 100;
-            scrollIndicator.style.width = scrolled + '%';
-        }
-        
         // Parallax effect for elements with .parallax class
         const parallaxElements = document.querySelectorAll('.parallax');
         parallaxElements.forEach(element => {
@@ -304,20 +123,35 @@ function setupScrollAnimations() {
 }
 
 /**
+ * Reveal content elements on scroll
+ */
+function revealContentElements() {
+    const elements = document.querySelectorAll('.content-reveal');
+    
+    elements.forEach(element => {
+        const elementTop = element.getBoundingClientRect().top;
+        const elementVisible = 150;
+        
+        if (elementTop < window.innerHeight - elementVisible) {
+            element.classList.add('revealed');
+        }
+    });
+}
+
+/**
+ * Add animation classes to existing elements
+ */
+function addAnimationClasses() {
+    // Add animation classes to elements that should animate on load
+    document.querySelectorAll('.animate-on-scroll').forEach(element => {
+        element.classList.add('content-reveal');
+    });
+}
+
+/**
  * Set up animations for user interactions
  */
 function setupInteractionAnimations() {
-    // Hamburger menu animation
-    const hamburger = document.querySelector('.hamburger');
-    const navMenu = document.querySelector('.nav-links');
-    
-    if (hamburger && navMenu) {
-        hamburger.addEventListener('click', function() {
-            this.classList.toggle('active');
-            navMenu.classList.toggle('active');
-        });
-    }
-    
     // Add hover animation to buttons
     document.querySelectorAll('.btn').forEach(button => {
         button.addEventListener('mouseenter', function() {

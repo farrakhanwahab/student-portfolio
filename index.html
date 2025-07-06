@@ -4,17 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DevStudent | Home</title>
-    
-    <!-- Resource Hints for Performance -->
-    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-    
-    <!-- Preload Critical Resources -->
-    <link rel="preload" href="css/style.css" as="style">
-    <link rel="preload" href="css/style-additions.css" as="style">
-    <link rel="preload" href="images/hero-image.jpg" as="image">
-    <link rel="preload" href="js/cache-manager.js" as="script">
-    
+
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -23,7 +13,7 @@
 </head>
 <body class="light-mode">
     <!-- Header Component Placeholder -->
-    <div id="header-placeholder"></div>
+    <div id="header-placeholder" data-lazy-component="header"></div>
 
     <main>
         <section class="hero">
@@ -735,17 +725,6 @@
                         </div>
                     </div>
                 </div>
-                
-                <div class="services-cta">
-                    <div class="cta-content">
-                        <h3>Ready to Start Your Project?</h3>
-                        <p>Let's discuss how I can help bring your ideas to life with cutting-edge technology solutions.</p>
-                    </div>
-                    <div class="cta-buttons">
-                        <a href="contact.html" class="btn btn-primary">Get Free Quote</a>
-                        <a href="services.html" class="btn btn-secondary">View All Services</a>
-                    </div>
-                </div>
             </div>
         </section>
     </main>
@@ -754,24 +733,11 @@
     <div id="footer-placeholder"></div>
 
     <script src="js/script.js"></script>
-    <script src="js/page-transitions.js"></script>
-    <script src="js/theme-toggle.js"></script>
+
+
     <script src="js/skills-animation.js"></script>
     <script src="js/components.js"></script>
-    <script src="js/cache-manager.js"></script>
     <script src="js/scroll-to-top.js"></script>
-    
-    <!-- Cache Status Indicator -->
-    <div class="cache-status" id="cache-status" title="Cache Status">
-        <i class="fas fa-wifi"></i>
-    </div>
-    
-    <!-- Performance Monitor (Debug - remove in production) -->
-    <div class="performance-monitor" id="performance-monitor">
-        <h4>Performance</h4>
-        <p id="load-time">Loading...</p>
-        <p id="cache-size">Calculating...</p>
-    </div>
     
     <!-- Scroll to Top Button -->
     <button id="scroll-to-top" class="scroll-to-top" title="Scroll to top">

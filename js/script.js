@@ -2,59 +2,33 @@
 document.addEventListener('DOMContentLoaded', function() {
     'use strict';
 
-    // Theme toggle functionality
-    const themeToggle = document.getElementById('theme-toggle');
-    const body = document.body;
-    
-    // Check for saved theme preference or use preferred color scheme
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme) {
-        body.classList.toggle('dark-mode', savedTheme === 'dark');
-        updateThemeToggleIcon(savedTheme === 'dark');
-    } else {
-        // Use preferred color scheme if available
-        const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        body.classList.toggle('dark-mode', prefersDarkMode);
-        updateThemeToggleIcon(prefersDarkMode);
-    }
-    
-    // Theme toggle click handler
-    if (themeToggle) {
-        themeToggle.addEventListener('click', function() {
-            body.classList.toggle('dark-mode');
-            const isDarkMode = body.classList.contains('dark-mode');
-            localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
-            updateThemeToggleIcon(isDarkMode);
-        });
-    }
-    
-    // Update theme toggle icon based on current theme
-    function updateThemeToggleIcon(isDarkMode) {
-        if (themeToggle) {
-            themeToggle.innerHTML = isDarkMode ? 
-                '<i class="fas fa-sun"></i>' : 
-                '<i class="fas fa-moon"></i>';
-        }
-    }
+
     
     // Mobile navigation toggle
-    const navToggle = document.querySelector('.nav-toggle');
-    const navMenu = document.querySelector('.nav-menu');
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    const navOverlay = document.querySelector('.mobile-nav-overlay');
     
-    if (navToggle && navMenu) {
-        navToggle.addEventListener('click', function() {
-            navMenu.classList.toggle('active');
-            navToggle.classList.toggle('active');
+    if (hamburger && navLinks && navOverlay) {
+        hamburger.addEventListener('click', function() {
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+            navOverlay.classList.toggle('active');
+        });
+        navOverlay.addEventListener('click', function() {
+            navLinks.classList.remove('active');
+            hamburger.classList.remove('active');
+            navOverlay.classList.remove('active');
         });
     }
     
     // Close mobile menu when clicking outside
     document.addEventListener('click', function(event) {
-        if (navMenu && navMenu.classList.contains('active') && 
-            !navMenu.contains(event.target) && 
-            !navToggle.contains(event.target)) {
-            navMenu.classList.remove('active');
-            navToggle.classList.remove('active');
+        if (navLinks && navLinks.classList.contains('active') && 
+            !navLinks.contains(event.target) && 
+            !hamburger.contains(event.target)) {
+            navLinks.classList.remove('active');
+            hamburger.classList.remove('active');
         }
     });
     
@@ -93,9 +67,9 @@ document.addEventListener('DOMContentLoaded', function() {
             e.preventDefault();
             
             // Close mobile menu if open
-            if (navMenu && navMenu.classList.contains('active')) {
-                navMenu.classList.remove('active');
-                navToggle.classList.remove('active');
+            if (navLinks && navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+                hamburger.classList.remove('active');
             }
             
             const target = this.getAttribute('href');
