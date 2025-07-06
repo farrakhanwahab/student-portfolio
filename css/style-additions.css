@@ -2125,6 +2125,31 @@ footer {
     }
 }
 
+/* Services Page Specific Fixes */
+.services-hero .hero-text h1,
+.services-hero .hero-text p {
+    color: white !important;
+}
+
+.services-hero .stat-number {
+    color: white !important;
+}
+
+.services-hero .stat-label {
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.services-hero .floating-icons i {
+    color: rgba(255, 255, 255, 0.8) !important;
+    font-size: 2rem;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+}
+
+.pricing-badge {
+    top: 10px !important;
+    box-shadow: 0 4px 15px rgba(138, 43, 226, 0.3);
+}
+
 /* ===== PORTFOLIO PAGE STYLES ===== */
 
 /* Portfolio Hero Section */
