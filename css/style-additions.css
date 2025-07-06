@@ -143,7 +143,8 @@
   .stagger-4 { transition-delay: 0.4s; }
   .stagger-5 { transition-delay: 0.5s; }
   
-  /* Refined hover animations */
+  /* UNUSED HOVER EFFECTS - COMMENTED OUT */
+  /*
   .hover-lift {
     transition: transform var(--transition-fast) var(--easing-bounce),
                 box-shadow var(--transition-fast) var(--easing-smooth);
@@ -153,6 +154,7 @@
     transform: translateY(-5px);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   }
+  */
   
   /* Button animations */
   .btn {
@@ -2792,12 +2794,12 @@ footer {
 }
 
 .resume-hero .hero-actions .btn-primary {
-    background: white;
-    color: var(--primary-color);
+    background: var(--primary-color);
+    color: white;
 }
 
 .resume-hero .hero-actions .btn-primary:hover {
-    background: var(--bg-light);
+    background: var(--secondary-color);
     transform: translateY(-2px);
 }
 
@@ -5917,4 +5919,11 @@ footer {
 }
 .about-hero, .about-hero *, .about-hero h1, .about-hero h2, .about-hero h3, .about-hero h4, .about-hero h5, .about-hero h6, .about-hero p, .about-hero span, .about-hero .stat-number, .about-hero .stat-label {
     color: #fff !important;
+}
+
+/* Force all text and icons in hero sections to be white */
+.services-hero, .portfolio-hero, .resume-hero, .blog-hero, .contact-hero, .testimonials-hero, .about-hero,
+.services-hero *, .portfolio-hero *, .resume-hero *, .blog-hero *, .contact-hero *, .testimonials-hero *, .about-hero * {
+    color: #fff !important;
+    fill: #fff !important;
 }
