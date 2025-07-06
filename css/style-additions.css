@@ -5927,3 +5927,62 @@ footer {
     color: #fff !important;
     fill: #fff !important;
 }
+
+/* 
+======================
+Disable Hover Effects (Selective)
+======================
+*/
+.btn:hover,
+.nav-links a:hover,
+.theme-toggle:hover,
+.skill-category:hover,
+.skill-item:hover,
+.project-card:hover,
+.project-link:hover,
+.tech-tag:hover,
+.service-card:hover,
+.tech-badge:hover,
+.interest-card:hover,
+.pricing-card:hover,
+.process-step:hover,
+.filter-btn:hover,
+.portfolio-item:hover,
+.portfolio-link:hover,
+.certification-item:hover,
+.blog-post:hover,
+.pagination a:hover,
+.search-form button:hover,
+.categories-widget a:hover,
+.post-info h4 a:hover,
+.tags a:hover,
+.info-card:hover,
+.contact-card:hover,
+.sidebar-widget:hover,
+.social-icons a:hover,
+.footer-links a:hover,
+.newsletter-button:hover,
+.overview-card:hover,
+.cta-buttons .btn:hover,
+.portfolio-card:hover,
+.stat-card:hover,
+.video-card:hover,
+.video-hero:hover,
+.play-button:hover,
+.category-btn:hover,
+.social-card:hover {
+    /* Disable hover effects for specific elements */
+    transform: none !important;
+    box-shadow: none !important;
+    background-color: inherit !important;
+    color: inherit !important;
+    opacity: inherit !important;
+    border-color: inherit !important;
+    text-decoration: inherit !important;
+    outline: inherit !important;
+    filter: inherit !important;
+    backdrop-filter: inherit !important;
+    border-radius: inherit !important;
+    transition: none !important;
+    animation: none !important;
+}
