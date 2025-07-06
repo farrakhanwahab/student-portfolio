@@ -8,172 +8,390 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style-additions.css">
-    <link rel="stylesheet" href="css/style-additions.css">
 </head>
 <body class="light-mode">
-    <header>
-        <div class="container">
-            <div class="logo">
-                <h1>Dev<span>Student</span></h1>
-            </div>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="services.html" class="active">Services</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="resume.html">Resume</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="testimonials.html">Testimonials</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-                <div class="theme-toggle" aria-label="Toggle dark mode">
-                    <!-- Icons will be added via JavaScript -->
-                </div>
-                <div class="hamburger">
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                </div>
-            </nav>
-        </div>
-    </header>
+    <!-- Header Component Placeholder -->
+    <div id="header-placeholder"></div>
 
     <main>
-        <section class="page-header">
+        <!-- Hero Section -->
+        <section class="services-hero">
             <div class="container">
-                <h1>My Services</h1>
-                <div class="breadcrumb">
-                    <a href="index.html">Home</a> / <span>Services</span>
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1 class="animate-text">My Services</h1>
+                        <p class="animate-text delay-1">Comprehensive digital solutions tailored to your business needs. From web development to AI integration, I help bring your ideas to life.</p>
+                        <div class="hero-stats animate-text delay-2">
+                            <div class="stat-item">
+                                <span class="stat-number">6+</span>
+                                <span class="stat-label">Services Offered</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">50+</span>
+                                <span class="stat-label">Projects Completed</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">100%</span>
+                                <span class="stat-label">Client Satisfaction</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-image animate-fade-in">
+                        <div class="services-illustration">
+                            <i class="fas fa-cogs"></i>
+                            <div class="floating-icons">
+                                <i class="fas fa-code"></i>
+                                <i class="fas fa-mobile-alt"></i>
+                                <i class="fas fa-robot"></i>
+                                <i class="fas fa-search"></i>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="services-intro">
+        <!-- Services Overview -->
+        <section class="services-overview">
             <div class="container">
-                <div class="section-intro">
-                    <h2>What I Can Do For You</h2>
-                    <p>As an Information Technology student with expertise in various technologies, I offer a range of services to help bring your digital ideas to life. Whether you need a website, mobile app, or technical consultation, I'm here to help.</p>
+                <div class="overview-grid">
+                    <div class="overview-card">
+                        <div class="overview-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <div class="overview-content">
+                            <h3>Fast Delivery</h3>
+                            <p>Quick turnaround times without compromising quality</p>
+                        </div>
+                    </div>
+                    <div class="overview-card">
+                        <div class="overview-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="overview-content">
+                            <h3>Secure & Reliable</h3>
+                            <p>Built with security best practices and modern technologies</p>
+                        </div>
+                    </div>
+                    <div class="overview-card">
+                        <div class="overview-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <div class="overview-content">
+                            <h3>24/7 Support</h3>
+                            <p>Ongoing support and maintenance for your projects</p>
+                        </div>
+                    </div>
+                    <div class="overview-card">
+                        <div class="overview-icon">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <div class="overview-content">
+                            <h3>Custom Design</h3>
+                            <p>Unique designs tailored to your brand and requirements</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
+        <!-- Detailed Services -->
         <section class="services-detailed">
             <div class="container">
+                <h2 class="section-title">What I Can Do For You</h2>
+                <p class="section-subtitle">Comprehensive digital solutions to help your business grow and succeed</p>
+                
                 <div class="services-grid">
-                    <div class="service-card animate-fade-in">
-                        <div class="service-icon">
-                            <i class="fas fa-laptop-code"></i>
+                    <!-- Web Development -->
+                    <div class="service-card" id="webdev">
+                        <div class="service-header">
+                            <div class="service-icon">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                            <div class="service-badge">Most Popular</div>
                         </div>
                         <div class="service-content">
-                            <h3>Web Development</h3>
-                            <p>Custom websites and web applications built with modern technologies to meet your specific needs.</p>
-                            <ul class="service-features">
-                                <li><i class="fas fa-check"></i> Responsive Design</li>
-                                <li><i class="fas fa-check"></i> Frontend Development</li>
-                                <li><i class="fas fa-check"></i> Backend Integration</li>
-                                <li><i class="fas fa-check"></i> E-commerce Solutions</li>
-                            </ul>
-                            <a href="contact.html" class="btn btn-primary">Get Started</a>
+                            <h3 class="service-title">Web Development</h3>
+                            <p class="service-description">Custom websites and web applications built with modern technologies and best practices. From simple landing pages to complex e-commerce platforms.</p>
+                            <div class="service-features">
+                                <div class="feature-item">
+                                    <i class="fas fa-check"></i>
+                                    <span>Responsive Design</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-check"></i>
+                                    <span>Frontend & Backend</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-check"></i>
+                                    <span>E-commerce Solutions</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-check"></i>
+                                    <span>Performance Optimized</span>
+                                </div>
+                            </div>
+                            <div class="service-tech">
+                                <span class="tech-badge">React.js</span>
+                                <span class="tech-badge">Node.js</span>
+                                <span class="tech-badge">PHP</span>
+                                <span class="tech-badge">MySQL</span>
+                            </div>
+                            <div class="service-price">
+                                <span class="price">Starting from $500</span>
+                                <span class="duration">/project</span>
+                            </div>
+                            <div class="service-cta">
+                                <a href="contact.html" class="btn btn-primary">Get Started</a>
+                                <a href="#pricing" class="btn btn-secondary">View Pricing</a>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="service-card animate-fade-in delay-1">
-                        <div class="service-icon">
-                            <i class="fas fa-mobile-alt"></i>
+                    <!-- Mobile Development -->
+                    <div class="service-card" id="mobiledev">
+                        <div class="service-header">
+                            <div class="service-icon">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <div class="service-badge">Trending</div>
                         </div>
                         <div class="service-content">
-                            <h3>Mobile App Development</h3>
-                            <p>Native and cross-platform mobile applications for iOS and Android that deliver exceptional user experiences.</p>
-                            <ul class="service-features">
-                                <li><i class="fas fa-check"></i> iOS Development</li>
-                                <li><i class="fas fa-check"></i> Android Development</li>
-                                <li><i class="fas fa-check"></i> Cross-Platform Solutions</li>
-                                <li><i class="fas fa-check"></i> App Store Submission</li>
-                            </ul>
-                            <a href="contact.html" class="btn btn-primary">Get Started</a>
+                            <h3 class="service-title">Mobile App Development</h3>
+                            <p class="service-description">Native and cross-platform mobile applications for iOS and Android. User-friendly interfaces with smooth performance and modern features.</p>
+                            <div class="service-features">
+                                <div class="feature-item">
+                                    <i class="fas fa-check"></i>
+                                    <span>iOS & Android</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-check"></i>
+                                    <span>Cross-platform</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-check"></i>
+                                    <span>App Store Publishing</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-check"></i>
+                                    <span>Push Notifications</span>
+                                </div>
+                            </div>
+                            <div class="service-tech">
+                                <span class="tech-badge">React Native</span>
+                                <span class="tech-badge">Flutter</span>
+                                <span class="tech-badge">Swift</span>
+                                <span class="tech-badge">Kotlin</span>
+                            </div>
+                            <div class="service-price">
+                                <span class="price">Starting from $800</span>
+                                <span class="duration">/app</span>
+                            </div>
+                            <div class="service-cta">
+                                <a href="contact.html" class="btn btn-primary">Get Started</a>
+                                <a href="#pricing" class="btn btn-secondary">View Pricing</a>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="service-card animate-fade-in delay-2">
-                        <div class="service-icon">
-                            <i class="fas fa-search"></i>
+                    <!-- UI/UX Design -->
+                    <div class="service-card" id="uiux">
+                        <div class="service-header">
+                            <div class="service-icon">
+                                <i class="fas fa-palette"></i>
+                            </div>
                         </div>
                         <div class="service-content">
-                            <h3>SEO Optimization</h3>
-                            <p>Improve your website's visibility in search engine results to attract more visitors and potential customers.</p>
-                            <ul class="service-features">
-                                <li><i class="fas fa-check"></i> Keyword Research</li>
-                                <li><i class="fas fa-check"></i> On-Page Optimization</li>
-                                <li><i class="fas fa-check"></i> Technical SEO</li>
-                                <li><i class="fas fa-check"></i> Performance Optimization</li>
-                            </ul>
-                            <a href="contact.html" class="btn btn-primary">Get Started</a>
+                            <h3 class="service-title">UI/UX Design</h3>
+                            <p class="service-description">User-centered design solutions that enhance user experience and drive engagement. From wireframes to high-fidelity prototypes.</p>
+                            <div class="service-features">
+                                <div class="feature-item">
+                                    <i class="fas fa-check"></i>
+                                    <span>User Research</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-check"></i>
+                                    <span>Wireframing</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-check"></i>
+                                    <span>Prototyping</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-check"></i>
+                                    <span>User Testing</span>
+                                </div>
+                            </div>
+                            <div class="service-tech">
+                                <span class="tech-badge">Figma</span>
+                                <span class="tech-badge">Adobe XD</span>
+                                <span class="tech-badge">Sketch</span>
+                                <span class="tech-badge">InVision</span>
+                            </div>
+                            <div class="service-price">
+                                <span class="price">Starting from $300</span>
+                                <span class="duration">/design</span>
+                            </div>
+                            <div class="service-cta">
+                                <a href="contact.html" class="btn btn-primary">Get Started</a>
+                                <a href="#pricing" class="btn btn-secondary">View Pricing</a>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="service-card animate-fade-in delay-3">
-                        <div class="service-icon">
-                            <i class="fas fa-database"></i>
+                    <!-- AI & Machine Learning -->
+                    <div class="service-card" id="ai">
+                        <div class="service-header">
+                            <div class="service-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <div class="service-badge">Advanced</div>
                         </div>
                         <div class="service-content">
-                            <h3>Database Design</h3>
-                            <p>Efficient and scalable database solutions to store and manage your data securely.</p>
-                            <ul class="service-features">
-                                <li><i class="fas fa-check"></i> SQL Databases</li>
-                                <li><i class="fas fa-check"></i> NoSQL Solutions</li>
-                                <li><i class="fas fa-check"></i> Data Modeling</li>
-                                <li><i class="fas fa-check"></i> Performance Tuning</li>
-                            </ul>
-                            <a href="contact.html" class="btn btn-primary">Get Started</a>
+                            <h3 class="service-title">AI & Machine Learning</h3>
+                            <p class="service-description">Intelligent solutions powered by artificial intelligence and machine learning. From chatbots to predictive analytics systems.</p>
+                            <div class="service-features">
+                                <div class="feature-item">
+                                    <i class="fas fa-check"></i>
+                                    <span>Chatbots</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-check"></i>
+                                    <span>Data Analysis</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-check"></i>
+                                    <span>Predictive Models</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-check"></i>
+                                    <span>API Integration</span>
+                                </div>
+                            </div>
+                            <div class="service-tech">
+                                <span class="tech-badge">Python</span>
+                                <span class="tech-badge">TensorFlow</span>
+                                <span class="tech-badge">OpenAI API</span>
+                                <span class="tech-badge">Scikit-learn</span>
+                            </div>
+                            <div class="service-price">
+                                <span class="price">Starting from $600</span>
+                                <span class="duration">/solution</span>
+                            </div>
+                            <div class="service-cta">
+                                <a href="contact.html" class="btn btn-primary">Get Started</a>
+                                <a href="#pricing" class="btn btn-secondary">View Pricing</a>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="service-card animate-fade-in delay-4">
-                        <div class="service-icon">
-                            <i class="fas fa-code-branch"></i>
+                    <!-- SEO Optimization -->
+                    <div class="service-card" id="seo">
+                        <div class="service-header">
+                            <div class="service-icon">
+                                <i class="fas fa-search"></i>
+                            </div>
                         </div>
                         <div class="service-content">
-                            <h3>API Development</h3>
-                            <p>Custom API solutions to connect your applications and services for seamless data exchange.</p>
-                            <ul class="service-features">
-                                <li><i class="fas fa-check"></i> RESTful APIs</li>
-                                <li><i class="fas fa-check"></i> GraphQL</li>
-                                <li><i class="fas fa-check"></i> API Documentation</li>
-                                <li><i class="fas fa-check"></i> Integration Services</li>
-                            </ul>
-                            <a href="contact.html" class="btn btn-primary">Get Started</a>
+                            <h3 class="service-title">SEO Optimization</h3>
+                            <p class="service-description">Improve your website's visibility in search engine results and drive organic traffic to your business.</p>
+                            <div class="service-features">
+                                <div class="feature-item">
+                                    <i class="fas fa-check"></i>
+                                    <span>Keyword Research</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-check"></i>
+                                    <span>On-page SEO</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-check"></i>
+                                    <span>Technical SEO</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-check"></i>
+                                    <span>Performance Audit</span>
+                                </div>
+                            </div>
+                            <div class="service-tech">
+                                <span class="tech-badge">Google Analytics</span>
+                                <span class="tech-badge">Search Console</span>
+                                <span class="tech-badge">Ahrefs</span>
+                                <span class="tech-badge">SEMrush</span>
+                            </div>
+                            <div class="service-price">
+                                <span class="price">Starting from $200</span>
+                                <span class="duration">/month</span>
+                            </div>
+                            <div class="service-cta">
+                                <a href="contact.html" class="btn btn-primary">Get Started</a>
+                                <a href="#pricing" class="btn btn-secondary">View Pricing</a>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="service-card animate-fade-in delay-5">
-                        <div class="service-icon">
-                            <i class="fas fa-robot"></i>
+                    <!-- Tech Consulting -->
+                    <div class="service-card" id="consulting">
+                        <div class="service-header">
+                            <div class="service-icon">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
                         </div>
                         <div class="service-content">
-                            <h3>AI & Machine Learning</h3>
-                            <p>Intelligent solutions powered by artificial intelligence and machine learning algorithms.</p>
-                            <ul class="service-features">
-                                <li><i class="fas fa-check"></i> Data Analysis</li>
-                                <li><i class="fas fa-check"></i> Predictive Models</li>
-                                <li><i class="fas fa-check"></i> Natural Language Processing</li>
-                                <li><i class="fas fa-check"></i> Computer Vision</li>
-                            </ul>
-                            <a href="contact.html" class="btn btn-primary">Get Started</a>
+                            <h3 class="service-title">Tech Consulting</h3>
+                            <p class="service-description">Strategic technology consulting to help you make informed decisions about your digital transformation journey.</p>
+                            <div class="service-features">
+                                <div class="feature-item">
+                                    <i class="fas fa-check"></i>
+                                    <span>Technology Audit</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-check"></i>
+                                    <span>Architecture Review</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-check"></i>
+                                    <span>Performance Optimization</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-check"></i>
+                                    <span>Security Assessment</span>
+                                </div>
+                            </div>
+                            <div class="service-tech">
+                                <span class="tech-badge">System Design</span>
+                                <span class="tech-badge">Performance</span>
+                                <span class="tech-badge">Security</span>
+                                <span class="tech-badge">Scalability</span>
+                            </div>
+                            <div class="service-price">
+                                <span class="price">Starting from $150</span>
+                                <span class="duration">/hour</span>
+                            </div>
+                            <div class="service-cta">
+                                <a href="contact.html" class="btn btn-primary">Get Started</a>
+                                <a href="#pricing" class="btn btn-secondary">View Pricing</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="pricing">
+        <!-- Pricing Section -->
+        <section class="pricing-section" id="pricing">
             <div class="container">
                 <h2 class="section-title">Pricing Plans</h2>
-                <div class="pricing-container">
+                <p class="section-subtitle">Choose the perfect plan for your project needs</p>
+                
+                <div class="pricing-grid">
                     <div class="pricing-card">
                         <div class="pricing-header">
                             <h3>Basic</h3>
-                            <div class="price">$499</div>
+                            <div class="price">
+                                <span class="currency">$</span>
+                                <span class="amount">499</span>
+                            </div>
                             <p>Perfect for small projects</p>
                         </div>
                         <div class="pricing-features">
@@ -182,6 +400,7 @@
                                 <li><i class="fas fa-check"></i> Mobile Responsive</li>
                                 <li><i class="fas fa-check"></i> Basic SEO</li>
                                 <li><i class="fas fa-check"></i> Contact Form</li>
+                                <li><i class="fas fa-check"></i> 1 Month Support</li>
                                 <li><i class="fas fa-times"></i> Custom Features</li>
                                 <li><i class="fas fa-times"></i> E-commerce Functionality</li>
                             </ul>
@@ -192,10 +411,13 @@
                     </div>
 
                     <div class="pricing-card featured">
-                        <div class="pricing-badge">Popular</div>
+                        <div class="pricing-badge">Most Popular</div>
                         <div class="pricing-header">
                             <h3>Standard</h3>
-                            <div class="price">$999</div>
+                            <div class="price">
+                                <span class="currency">$</span>
+                                <span class="amount">999</span>
+                            </div>
                             <p>For growing businesses</p>
                         </div>
                         <div class="pricing-features">
@@ -205,6 +427,7 @@
                                 <li><i class="fas fa-check"></i> Advanced SEO</li>
                                 <li><i class="fas fa-check"></i> Contact Form</li>
                                 <li><i class="fas fa-check"></i> Basic Custom Features</li>
+                                <li><i class="fas fa-check"></i> 3 Months Support</li>
                                 <li><i class="fas fa-times"></i> E-commerce Functionality</li>
                             </ul>
                         </div>
@@ -216,7 +439,10 @@
                     <div class="pricing-card">
                         <div class="pricing-header">
                             <h3>Premium</h3>
-                            <div class="price">$1999</div>
+                            <div class="price">
+                                <span class="currency">$</span>
+                                <span class="amount">1999</span>
+                            </div>
                             <p>For established businesses</p>
                         </div>
                         <div class="pricing-features">
@@ -227,6 +453,7 @@
                                 <li><i class="fas fa-check"></i> Contact Form</li>
                                 <li><i class="fas fa-check"></i> Advanced Custom Features</li>
                                 <li><i class="fas fa-check"></i> E-commerce Functionality</li>
+                                <li><i class="fas fa-check"></i> 6 Months Support</li>
                             </ul>
                         </div>
                         <div class="pricing-footer">
@@ -234,188 +461,122 @@
                         </div>
                     </div>
                 </div>
+                
                 <div class="pricing-note">
                     <p>Need a custom solution? <a href="contact.html">Contact me</a> for a personalized quote.</p>
                 </div>
             </div>
         </section>
 
-        <section class="process">
+        <!-- Process Section -->
+        <section class="process-section">
             <div class="container">
                 <h2 class="section-title">My Work Process</h2>
-                <div class="process-container">
+                <p class="section-subtitle">A proven methodology to deliver exceptional results</p>
+                
+                <div class="process-grid">
                     <div class="process-step">
-                        <div class="step-number">1</div>
+                        <div class="step-number">01</div>
                         <div class="step-content">
                             <h3>Discovery</h3>
-                            <p>Understanding your requirements, goals, and vision for the project.</p>
+                            <p>Understanding your requirements, goals, and vision for the project through detailed consultation.</p>
+                            <div class="step-features">
+                                <span class="step-feature">Requirements Gathering</span>
+                                <span class="step-feature">Goal Setting</span>
+                                <span class="step-feature">Project Scope</span>
+                            </div>
                         </div>
                     </div>
+
                     <div class="process-step">
-                        <div class="step-number">2</div>
+                        <div class="step-number">02</div>
                         <div class="step-content">
                             <h3>Planning</h3>
-                            <p>Creating a detailed roadmap and strategy for your project.</p>
+                            <p>Creating a detailed roadmap and strategy for your project with timelines and milestones.</p>
+                            <div class="step-features">
+                                <span class="step-feature">Project Roadmap</span>
+                                <span class="step-feature">Timeline Planning</span>
+                                <span class="step-feature">Resource Allocation</span>
+                            </div>
                         </div>
                     </div>
+
                     <div class="process-step">
-                        <div class="step-number">3</div>
+                        <div class="step-number">03</div>
                         <div class="step-content">
                             <h3>Design</h3>
-                            <p>Crafting the visual and functional aspects of your solution.</p>
+                            <p>Crafting the visual and functional aspects of your solution with user experience in mind.</p>
+                            <div class="step-features">
+                                <span class="step-feature">Wireframing</span>
+                                <span class="step-feature">UI/UX Design</span>
+                                <span class="step-feature">Prototyping</span>
+                            </div>
                         </div>
                     </div>
+
                     <div class="process-step">
-                        <div class="step-number">4</div>
+                        <div class="step-number">04</div>
                         <div class="step-content">
                             <h3>Development</h3>
-                            <p>Building your solution with clean, efficient code.</p>
+                            <p>Building your solution with clean, efficient code and modern development practices.</p>
+                            <div class="step-features">
+                                <span class="step-feature">Frontend Development</span>
+                                <span class="step-feature">Backend Integration</span>
+                                <span class="step-feature">Database Design</span>
+                            </div>
                         </div>
                     </div>
+
                     <div class="process-step">
-                        <div class="step-number">5</div>
+                        <div class="step-number">05</div>
                         <div class="step-content">
                             <h3>Testing</h3>
-                            <p>Ensuring everything works perfectly across all devices.</p>
+                            <p>Ensuring everything works perfectly across all devices and browsers with thorough testing.</p>
+                            <div class="step-features">
+                                <span class="step-feature">Cross-browser Testing</span>
+                                <span class="step-feature">Mobile Testing</span>
+                                <span class="step-feature">Performance Testing</span>
+                            </div>
                         </div>
                     </div>
+
                     <div class="process-step">
-                        <div class="step-number">6</div>
+                        <div class="step-number">06</div>
                         <div class="step-content">
                             <h3>Launch</h3>
-                            <p>Deploying your solution and making it live.</p>
+                            <p>Deploying your solution and making it live with ongoing support and maintenance.</p>
+                            <div class="step-features">
+                                <span class="step-feature">Deployment</span>
+                                <span class="step-feature">Go Live</span>
+                                <span class="step-feature">Support & Maintenance</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="cta">
+        <!-- CTA Section -->
+        <section class="services-cta">
             <div class="container">
                 <div class="cta-content">
                     <h2>Ready to Start Your Project?</h2>
-                    <p>Let's work together to bring your ideas to life.</p>
-                    <a href="contact.html" class="btn btn-primary">Get in Touch</a>
+                    <p>Let's discuss how I can help bring your ideas to life with cutting-edge technology solutions.</p>
+                    <div class="cta-buttons">
+                        <a href="contact.html" class="btn btn-primary">Get Free Quote</a>
+                        <a href="portfolio.html" class="btn btn-secondary">View My Work</a>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <!-- Company Info -->
-                <div class="footer-logo">
-                    <h2>Dev<span>Student</span></h2>
-                    <div class="section-divider"></div>
-                    <p>Building the future, one line of code at a time. Passionate about web development, software engineering, and creating digital experiences that matter.</p>
-                    <div class="office-hours">
-                        <h3>Office Hours</h3>
-                        <p>Monday - Friday: 9AM - 6PM</p>
-                        <p>Weekend: By Appointment</p>
-                    </div>
-                </div>
-    
-                <!-- Quick Links -->
-                <div class="footer-links">
-                    <h3>Quick Links</h3>
-                    <div class="section-divider"></div>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Me</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="portfolio.html">Portfolio</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-    
-                <!-- Services -->
-                <div class="footer-services">
-                    <h3>Services</h3>
-                    <div class="section-divider"></div>
-                    <ul>
-                        <li><a href="services.html#webdev">Web Development</a></li>
-                        <li><a href="services.html#mobiledev">Mobile App Development</a></li>
-                        <li><a href="services.html#uiux">UI/UX Design</a></li>
-                        <li><a href="services.html#consulting">Tech Consulting</a></li>
-                        <li><a href="services.html#seo">SEO Optimization</a></li>
-                    </ul>
-                </div>
-    
-                <!-- Contact Info -->
-                <div class="footer-contact">
-                    <h3>Get In Touch</h3>
-                    <div class="section-divider"></div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="contact-text">
-                            212 Sweetlove Street<br>
-                            Greater Accra, Ghana
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-text">
-                            wahabfarrakhan@gmail.com
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone-alt"></i>
-                        </div>
-                        <div class="contact-text">
-                            +233 (0) 500-428-501
-                        </div>
-                    </div>
-    
-                    <!-- Social Media -->
-                    <h3>Connect With Me</h3>
-                    <div class="social-icons">
-                        <a href="https://github.com/farrakhanwahab"><i class="fab fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/farrakhan-wahab-227a15241?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"><i class="fab fa-linkedin"></i></a>
-                        <a href="mailto:wahabfarrakhan@gmail.com"><i class="fas fa-envelope"></i></a>
-                        <a href="https://www.instagram.com/faa.gw?igsh=YzdlazYzcms2MTdn&utm_source=qr"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Newsletter Section -->
-            <div class="newsletter-section">
-                <div class="newsletter-container">
-                    <div class="newsletter-text">
-                        <h3>Subscribe to My Newsletter</h3>
-                        <p>Stay updated with my latest projects, tech insights, and coding tips.</p>
-                    </div>
-                    <form class="newsletter-form">
-                        <input type="email" placeholder="Enter your email" class="newsletter-input" required>
-                        <button type="submit" class="newsletter-button">Subscribe</button>
-                    </form>
-                </div>
-            </div>
-            
-            <!-- Footer Bottom -->
-            <div class="footer-bottom">
-                <div class="footer-copyright">
-                    <p>&copy; 2025 FW. All Rights Reserved.</p>
-                    <p>Developed by Farrakhan Wahab</p>
-                </div>
-                <div class="footer-legal">
-                    <a href="privacy.html">Privacy Policy</a>
-                    <a href="terms.html">Terms of Service</a>
-                    <a href="sitemap.html">Sitemap</a>
-                    <a href="contact.html#faq">FAQ</a>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <!-- Footer Component Placeholder -->
+    <div id="footer-placeholder"></div>
 
     <script src="js/script.js"></script>
     <script src="js/page-transitions.js"></script>
     <script src="js/theme-toggle.js"></script>
+    <script src="js/components.js"></script>
 </body>
 </html>
