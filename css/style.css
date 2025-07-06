@@ -918,6 +918,10 @@ body.dark-mode .blog-preview {
     grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
     gap: 2.5rem;
     margin-top: 3rem;
+    padding: 0 2rem;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .blog-card {
@@ -3028,70 +3032,7 @@ body.dark-mode .language-item {
         box-shadow: var(--box-shadow);
     }
     
-    /* Social Connect */
-    .social-connect {
-        padding: 5rem 0;
-    }
-    
-    .section-subtitle {
-        text-align: center;
-        color: var(--text-color-light);
-        max-width: 700px;
-        margin: 0 auto 3rem;
-    }
-    
-    .social-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 2rem;
-    }
-    
-    .social-card {
-        display: flex;
-        align-items: center;
-        gap: 1.5rem;
-        padding: 2rem;
-        border-radius: var(--border-radius);
-        box-shadow: var(--box-shadow);
-        transition: var(--transition);
-    }
-    
-    .social-card:hover {
-        transform: translateY(-10px);
-    }
-    
-    .social-card.github {
-        background-color: #333;
-        color: var(--light-color);
-    }
-    
-    .social-card.linkedin {
-        background-color: #0077B5;
-        color: var(--light-color);
-    }
-    
-    .social-card.twitter {
-        background-color: #1DA1F2;
-        color: var(--light-color);
-    }
-    
-    .social-card.instagram {
-        background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
-        color: var(--light-color);
-    }
-    
-    .social-icon {
-        font-size: 2.5rem;
-    }
-    
-    .social-info h3 {
-        font-size: 1.3rem;
-        margin-bottom: 0.3rem;
-    }
-    
-    .social-info p {
-        opacity: 0.8;
-    }
+    /* Social Connect - Styles moved to style-additions.css */
     
     /* FAQ */
     .faq {

@@ -10,46 +10,97 @@
     <link rel="stylesheet" href="css/style-additions.css">
 </head>
 <body class="light-mode">
-    <header>
-        <div class="container">
-            <div class="logo">
-                <h1>Dev<span>Student</span></h1>
-            </div>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="resume.html">Resume</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="testimonials.html">Testimonials</a></li>
-                    <li><a href="contact.html" class="active">Contact</a></li>
-                </ul>
-                <div class="theme-toggle" aria-label="Toggle dark mode">
-                    <!-- Icons will be added via JavaScript -->
-                </div>
-                <div class="hamburger">
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                </div>
-            </nav>
-        </div>
-    </header>
+    <!-- Header Component Placeholder -->
+    <div id="header-placeholder"></div>
 
-    <main>
-        <section class="page-header">
+    <main class="page">
+        <!-- Hero Section -->
+        <section class="contact-hero">
             <div class="container">
-                <h1>Contact Me</h1>
-                <div class="breadcrumb">
-                    <a href="index.html">Home</a> / <span>Contact</span>
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1>Let's Work Together</h1>
+                        <p>Ready to bring your ideas to life? I'm here to help you create amazing digital experiences. Whether you have a project in mind or just want to chat about possibilities, let's connect!</p>
+                        
+                        <!-- Hero Stats -->
+                        <div class="hero-stats">
+                            <div class="stat-item">
+                                <div class="stat-number">24h</div>
+                                <div class="stat-label">Response Time</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">100+</div>
+                                <div class="stat-label">Projects Completed</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">50+</div>
+                                <div class="stat-label">Happy Clients</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">5★</div>
+                                <div class="stat-label">Client Rating</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-illustration">
+                        <i class="fas fa-envelope-open-text"></i>
+                        <div class="floating-icons">
+                            <i class="fas fa-phone"></i>
+                            <i class="fas fa-comments"></i>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <i class="fas fa-clock"></i>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
+        <!-- Contact Overview -->
+        <section class="contact-overview">
+            <div class="container">
+                <div class="overview-grid">
+                    <div class="overview-card">
+                        <div class="overview-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <div class="overview-content">
+                            <h3>Quick Response</h3>
+                            <p>I typically respond to all inquiries within 24 hours, ensuring you get the information you need promptly.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="overview-card">
+                        <div class="overview-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <div class="overview-content">
+                            <h3>Free Consultation</h3>
+                            <p>Let's discuss your project requirements and explore the best solutions for your needs at no cost.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="overview-card">
+                        <div class="overview-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="overview-content">
+                            <h3>Secure Communication</h3>
+                            <p>Your information and project details are kept confidential and secure throughout our collaboration.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Information -->
         <section class="contact-info">
             <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Get In Touch</h2>
+                    <p class="section-subtitle">Choose your preferred way to reach out. I'm available through multiple channels to make it easy for you to connect.</p>
+                </div>
+                
                 <div class="contact-grid">
                     <div class="contact-card">
                         <div class="contact-icon">
@@ -59,6 +110,7 @@
                             <h3>Email</h3>
                             <p>wahabfarrakhan@gmail.com</p>
                             <p>wahabfarrakhan@proton.me</p>
+                            <a href="mailto:wahabfarrakhan@gmail.com" class="contact-link">Send Email</a>
                         </div> 
                     </div>
                     <div class="contact-card">
@@ -69,6 +121,7 @@
                             <h3>Phone</h3>
                             <p>+233 (0) 500-428-501</p>
                             <p>+233 (0) 500-428-501</p>
+                            <a href="tel:+233500428501" class="contact-link">Call Now</a>
                         </div> 
                     </div>
                     <div class="contact-card">
@@ -78,7 +131,8 @@
                         <div class="contact-details">
                             <h3>Location</h3>
                             <p>Weija, Accra</p>
-                            <p>Ghana </p>
+                            <p>Ghana</p>
+                            <a href="#map" class="contact-link">View on Map</a>
                         </div>
                     </div>
                     <div class="contact-card">
@@ -89,51 +143,76 @@
                             <h3>Working Hours</h3>
                             <p>Monday - Friday: 9am - 6pm</p>
                             <p>Weekend: By Appointment</p>
+                            <a href="#schedule" class="contact-link">Schedule Meeting</a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>  
 
+        <!-- Contact Form Section -->
         <section class="contact-form-section">
             <div class="container">
                 <div class="contact-wrapper">
                     <div class="contact-form-container">
-                        <h2>Get In Touch</h2>
-                        <p>Feel free to reach out with any questions, project inquiries, or collaboration opportunities. I'll get back to you as soon as possible.</p>
+                        <div class="form-header">
+                            <h2>Send Me a Message</h2>
+                            <p>Fill out the form below and I'll get back to you as soon as possible. I'm excited to hear about your project!</p>
+                        </div>
                         <form id="contact-form" class="contact-form">
                             <div class="form-row">
                                 <div class="form-group">
-                                    <label for="name">Your Name</label>
-                                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                                    <label for="name">Your Name *</label>
+                                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
                                 </div>
                                 <div class="form-group">
-                                    <label for="email">Your Email</label>
-                                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                                    <label for="email">Your Email *</label>
+                                    <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="phone">Phone Number</label>
+                                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+                                </div>
+                                <div class="form-group">
+                                    <label for="subject">Subject *</label>
+                                    <input type="text" id="subject" name="subject" placeholder="What's this about?" required>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="subject">Subject</label>
-                                <input type="text" id="subject" name="subject" placeholder="Enter subject" required>
+                                <label for="message">Message *</label>
+                                <textarea id="message" name="message" rows="6" placeholder="Tell me about your project or inquiry..." required></textarea>
                             </div>
-                            <div class="form-group">
-                                <label for="message">Message</label>
-                                <textarea id="message" name="message" rows="6" placeholder="Enter your message" required></textarea>
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="fas fa-paper-plane"></i>
+                                    Send Message
+                                </button>
+                                <p class="form-note">* Required fields</p>
                             </div>
-                            <button type="submit" class="btn btn-primary">Send Message</button>
                         </form>
                     </div>
                     <div class="contact-map">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1980.123456789!2d-0.2907785!3d5.5996414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1021abcd1234efgh%3A0x5678ijkl9012mnop!2sWest%20Hills%20Mall!5e0!3m2!1sen!2sgh!4v1623252234044!5m2!1sen!2sgh" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        <div class="map-header">
+                            <h3>Find Me Here</h3>
+                            <p>Located in the vibrant city of Accra, Ghana</p>
+                        </div>
+                        <div class="map-container">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1980.123456789!2d-0.2907785!3d5.5996414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1021abcd1234efgh%3A0x5678ijkl9012mnop!2sWest%20Hills%20Mall!5e0!3m2!1sen!2sgh!4v1623252234044!5m2!1sen!2sgh" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Social Connect Section -->
         <section class="social-connect">
             <div class="container">
-                <h2 class="section-title">Connect With Me</h2>
-                <p class="section-subtitle">Follow me on social media to stay updated with my latest projects and insights.</p>
+                <div class="section-header">
+                    <h2 class="section-title">Connect With Me</h2>
+                    <p class="section-subtitle">Follow me on social media to stay updated with my latest projects, tech insights, and behind-the-scenes content.</p>
+                </div>
                 <div class="social-grid">
                     <a href="https://github.com/farrakhanwahab" class="social-card github">
                         <div class="social-icon">
@@ -142,6 +221,7 @@
                         <div class="social-info">
                             <h3>GitHub</h3>
                             <p>farrakhanwahab</p>
+                            <span class="social-desc">Check out my code and projects</span>
                         </div>
                     </a>
                     <a href="https://www.linkedin.com/in/farrakhan-wahab-227a15241?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" class="social-card linkedin">
@@ -151,6 +231,7 @@
                         <div class="social-info">
                             <h3>LinkedIn</h3>
                             <p>Farrakhan Wahab</p>
+                            <span class="social-desc">Professional network and updates</span>
                         </div>
                     </a>
                     <a href="https://www.instagram.com/faa.gw" class="social-card instagram">
@@ -160,16 +241,20 @@
                         <div class="social-info">
                             <h3>Instagram</h3>
                             <p>faa.gw</p>
+                            <span class="social-desc">Daily life and project snippets</span>
                         </div>
                     </a>
                 </div>
             </div>
         </section>
-        
 
-        <section class="faq">
+        <!-- FAQ Section -->
+        <section class="faq" id="faq">
             <div class="container">
-                <h2 class="section-title">Frequently Asked Questions</h2>
+                <div class="section-header">
+                    <h2 class="section-title">Frequently Asked Questions</h2>
+                    <p class="section-subtitle">Find answers to common questions about my services, process, and collaboration.</p>
+                </div>
                 <div class="faq-container">
                     <div class="faq-item">
                         <div class="faq-question">
@@ -177,7 +262,7 @@
                             <span class="faq-toggle"><i class="fas fa-plus"></i></span>
                         </div>
                         <div class="faq-answer">
-                            <p>I offer a range of services including web development, mobile app development, SEO optimization, database design, API development, and AI/machine learning solutions. You can find more details on my Services page.</p>
+                            <p>I offer a comprehensive range of services including web development, mobile app development, UI/UX design, SEO optimization, database design, API development, and AI/machine learning solutions. You can find detailed information about each service on my Services page.</p>
                         </div>
                     </div>
                     <div class="faq-item">
@@ -186,7 +271,7 @@
                             <span class="faq-toggle"><i class="fas fa-plus"></i></span>
                         </div>
                         <div class="faq-answer">
-                            <p>My pricing varies depending on the scope and requirements of each project. I offer different packages starting from $499 for basic websites. For a personalized quote, please contact me with details about your project.</p>
+                            <p>My pricing is project-based and varies depending on the scope, complexity, and requirements. I offer different packages starting from $499 for basic websites. For a personalized quote tailored to your specific needs, please contact me with details about your project.</p>
                         </div>
                     </div>
                     <div class="faq-item">
@@ -195,7 +280,7 @@
                             <span class="faq-toggle"><i class="fas fa-plus"></i></span>
                         </div>
                         <div class="faq-answer">
-                            <p>The timeline for each project depends on its complexity and scope. A simple website might take 2-3 weeks, while more complex applications could take several months. I'll provide you with a detailed timeline during our initial consultation.</p>
+                            <p>Project timelines depend on complexity and scope. A simple website typically takes 2-3 weeks, while more complex applications can take several months. During our initial consultation, I'll provide you with a detailed timeline and milestones for your specific project.</p>
                         </div>
                     </div>
                     <div class="faq-item">
@@ -204,129 +289,52 @@
                             <span class="faq-toggle"><i class="fas fa-plus"></i></span>
                         </div>
                         <div class="faq-answer">
-                            <p>Yes, I offer maintenance packages to ensure your website or application continues to run smoothly after launch. These packages include regular updates, security patches, and technical support.</p>
+                            <p>Yes, I offer comprehensive maintenance packages to ensure your website or application continues to run smoothly after launch. These packages include regular updates, security patches, performance optimization, and ongoing technical support.</p>
                         </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>What is your development process?</h3>
+                            <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>My development process follows an agile methodology: Discovery & Planning → Design & Prototyping → Development → Testing & Quality Assurance → Deployment → Post-launch Support. I maintain clear communication throughout each phase.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Do you work with international clients?</h3>
+                            <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Absolutely! I work with clients from around the world. I'm experienced in remote collaboration and use modern communication tools to ensure smooth project delivery regardless of time zones or geographical location.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="contact-cta">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Ready to Start Your Project?</h2>
+                    <p>Let's turn your ideas into reality. I'm here to help you create something amazing.</p>
+                    <div class="cta-buttons">
+                        <a href="#contact-form" class="btn btn-primary">Start Your Project</a>
+                        <a href="portfolio.html" class="btn btn-secondary">View My Work</a>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <!-- Company Info -->
-                <div class="footer-logo">
-                    <h2>Dev<span>Student</span></h2>
-                    <div class="section-divider"></div>
-                    <p>Building the future, one line of code at a time. Passionate about web development, software engineering, and creating digital experiences that matter.</p>
-                    <div class="office-hours">
-                        <h3>Office Hours</h3>
-                        <p>Monday - Friday: 9AM - 6PM</p>
-                        <p>Weekend: By Appointment</p>
-                    </div>
-                </div>
-    
-                <!-- Quick Links -->
-                <div class="footer-links">
-                    <h3>Quick Links</h3>
-                    <div class="section-divider"></div>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Me</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="portfolio.html">Portfolio</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-    
-                <!-- Services -->
-                <div class="footer-services">
-                    <h3>Services</h3>
-                    <div class="section-divider"></div>
-                    <ul>
-                        <li><a href="services.html#webdev">Web Development</a></li>
-                        <li><a href="services.html#mobiledev">Mobile App Development</a></li>
-                        <li><a href="services.html#uiux">UI/UX Design</a></li>
-                        <li><a href="services.html#consulting">Tech Consulting</a></li>
-                        <li><a href="services.html#seo">SEO Optimization</a></li>
-                    </ul>
-                </div>
-    
-                <!-- Contact Info -->
-                <div class="footer-contact">
-                    <h3>Get In Touch</h3>
-                    <div class="section-divider"></div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="contact-text">
-                            212 Sweetlove Street<br>
-                            Greater Accra, Ghana
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-text">
-                            wahabfarrakhan@gmail.com
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone-alt"></i>
-                        </div>
-                        <div class="contact-text">
-                            +233 (0) 500-428-501
-                        </div>
-                    </div>
-    
-                    <!-- Social Media -->
-                    <h3>Connect With Me</h3>
-                    <div class="social-icons">
-                        <a href="https://github.com/farrakhanwahab"><i class="fab fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/farrakhan-wahab-227a15241?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"><i class="fab fa-linkedin"></i></a>
-                        <a href="mailto:wahabfarrakhan@gmail.com"><i class="fas fa-envelope"></i></a>
-                        <a href="https://www.instagram.com/faa.gw?igsh=YzdlazYzcms2MTdn&utm_source=qr"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Newsletter Section -->
-            <div class="newsletter-section">
-                <div class="newsletter-container">
-                    <div class="newsletter-text">
-                        <h3>Subscribe to My Newsletter</h3>
-                        <p>Stay updated with my latest projects, tech insights, and coding tips.</p>
-                    </div>
-                    <form class="newsletter-form">
-                        <input type="email" placeholder="Enter your email" class="newsletter-input" required>
-                        <button type="submit" class="newsletter-button">Subscribe</button>
-                    </form>
-                </div>
-            </div>
-            
-            <!-- Footer Bottom -->
-            <div class="footer-bottom">
-                <div class="footer-copyright">
-                    <p>&copy; 2025 FW. All Rights Reserved.</p>
-                    <p>Developed by Farrakhan Wahab</p>
-                </div>
-                <div class="footer-legal">
-                    <a href="privacy.html">Privacy Policy</a>
-                    <a href="terms.html">Terms of Service</a>
-                    <a href="sitemap.html">Sitemap</a>
-                    <a href="contact.html#faq">FAQ</a>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <!-- Footer Component Placeholder -->
+    <div id="footer-placeholder"></div>
 
     <script src="js/script.js"></script>
     <script src="js/page-transitions.js"></script>
     <script src="js/theme-toggle.js"></script>
+    <script src="js/components.js"></script>
 </body>
 </html>
