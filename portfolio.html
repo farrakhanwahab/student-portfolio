@@ -11,131 +11,439 @@
     <link rel="stylesheet" href="css/portfolio-filter.css">
 </head>
 <body class="light-mode">
-    <header>
-        <div class="container">
-            <div class="logo">
-                <h1>Dev<span>Student</span></h1>
-            </div>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="portfolio.html" class="active">Portfolio</a></li>
-                    <li><a href="resume.html">Resume</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="testimonials.html">Testimonials</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-                <div class="theme-toggle" aria-label="Toggle dark mode">
-                    <!-- Icons will be added via JavaScript -->
-                </div>
-                <div class="hamburger">
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                </div>
-            </nav>
-        </div>
-    </header>
+    <!-- Header Component Placeholder -->
+    <div id="header-placeholder"></div>
 
     <main>
-        <section class="page-header">
+        <!-- Hero Section -->
+        <section class="portfolio-hero">
             <div class="container">
-                <h1>My Portfolio</h1>
-                <div class="breadcrumb">
-                    <a href="index.html">Home</a> / <span>Portfolio</span>
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1 class="animate-text">My Portfolio</h1>
+                        <p class="animate-text delay-1">Showcasing my best work across web development, mobile apps, UI/UX design, and machine learning. Each project represents my passion for creating innovative digital solutions.</p>
+                        <div class="hero-stats animate-text delay-2">
+                            <div class="stat-item">
+                                <span class="stat-number">20+</span>
+                                <span class="stat-label">Projects Completed</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">15+</span>
+                                <span class="stat-label">Happy Clients</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">5+</span>
+                                <span class="stat-label">Years Experience</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-image animate-fade-in">
+                        <div class="portfolio-illustration">
+                            <i class="fas fa-briefcase"></i>
+                            <div class="floating-icons">
+                                <i class="fas fa-code"></i>
+                                <i class="fas fa-mobile-alt"></i>
+                                <i class="fas fa-palette"></i>
+                                <i class="fas fa-brain"></i>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="portfolio">
+        <!-- Portfolio Overview -->
+        <section class="portfolio-overview">
             <div class="container">
+                <div class="overview-grid">
+                    <div class="overview-card">
+                        <div class="overview-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <div class="overview-content">
+                            <h3>Web Development</h3>
+                            <p>Modern, responsive websites and web applications</p>
+                            <span class="project-count">8 Projects</span>
+                        </div>
+                    </div>
+                    <div class="overview-card">
+                        <div class="overview-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <div class="overview-content">
+                            <h3>Mobile Apps</h3>
+                            <p>Native and cross-platform mobile applications</p>
+                            <span class="project-count">5 Projects</span>
+                        </div>
+                    </div>
+                    <div class="overview-card">
+                        <div class="overview-icon">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <div class="overview-content">
+                            <h3>UI/UX Design</h3>
+                            <p>User-centered design solutions and prototypes</p>
+                            <span class="project-count">4 Projects</span>
+                        </div>
+                    </div>
+                    <div class="overview-card">
+                        <div class="overview-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="overview-content">
+                            <h3>Machine Learning</h3>
+                            <p>AI-powered solutions and data analysis</p>
+                            <span class="project-count">3 Projects</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Filter Section -->
+        <section class="portfolio-filter-section">
+            <div class="container">
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">Explore my latest work across different technologies and industries</p>
+                
                 <div class="portfolio-filter">
-                    <button class="filter-btn active" data-filter="all">All</button>
-                    <button class="filter-btn" data-filter="web-development">Web Development</button>
-                    <button class="filter-btn" data-filter="mobile-apps">Mobile Apps</button>
-                    <button class="filter-btn" data-filter="ui-ux-design">UI/UX Design</button>
-                    <button class="filter-btn" data-filter="machine-learning">Machine Learning</button>
+                    <button class="filter-btn active" data-filter="all">
+                        <i class="fas fa-th"></i>
+                        All Projects
+                    </button>
+                    <button class="filter-btn" data-filter="web-development">
+                        <i class="fas fa-laptop-code"></i>
+                        Web Development
+                    </button>
+                    <button class="filter-btn" data-filter="mobile-apps">
+                        <i class="fas fa-mobile-alt"></i>
+                        Mobile Apps
+                    </button>
+                    <button class="filter-btn" data-filter="ui-ux-design">
+                        <i class="fas fa-palette"></i>
+                        UI/UX Design
+                    </button>
+                    <button class="filter-btn" data-filter="machine-learning">
+                        <i class="fas fa-brain"></i>
+                        Machine Learning
+                    </button>
                 </div>
 
                 <div class="portfolio-grid">
-                    <div class="portfolio-item web-development">
-                        <div class="portfolio-img">
-                            <img src="images/project1.png" alt="E-commerce Website">
-                            <div class="portfolio-overlay">
-                                <div class="portfolio-info">
-                                    <h3>E-commerce Platform</h3>
-                                    <p>Web Development</p>
-                                    <a href="#" class="portfolio-link" data-project="project1"><i class="fas fa-link"></i></a>
+                    <!-- E-commerce Platform -->
+                    <div class="portfolio-item web-development" data-category="web-development">
+                        <div class="portfolio-card">
+                            <div class="portfolio-image">
+                                <img src="images/project1.png" alt="E-commerce Platform">
+                                <div class="portfolio-overlay">
+                                    <div class="overlay-content">
+                                        <div class="overlay-buttons">
+                                            <a href="#" class="overlay-btn" data-project="project1">
+                                                <i class="fas fa-eye"></i>
+                                            </a>
+                                            <a href="#" class="overlay-btn">
+                                                <i class="fas fa-external-link-alt"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="portfolio-badge">Featured</div>
+                            </div>
+                            <div class="portfolio-content">
+                                <div class="portfolio-category">Web Development</div>
+                                <h3 class="portfolio-title">E-commerce Platform</h3>
+                                <p class="portfolio-description">A full-featured e-commerce platform with product management, user authentication, and payment processing.</p>
+                                <div class="portfolio-tech">
+                                    <span class="tech-tag">React.js</span>
+                                    <span class="tech-tag">Node.js</span>
+                                    <span class="tech-tag">MongoDB</span>
+                                    <span class="tech-tag">Stripe</span>
+                                </div>
+                                <div class="portfolio-meta">
+                                    <span class="meta-item">
+                                        <i class="fas fa-calendar"></i>
+                                        June 2022
+                                    </span>
+                                    <span class="meta-item">
+                                        <i class="fas fa-clock"></i>
+                                        3 months
+                                    </span>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="portfolio-item machine-learning"">
-                        <div class="portfolio-img">
-                            <img src="images/project2.png" alt="AI Chatbot">
-                            <div class="portfolio-overlay">
-                                <div class="portfolio-info">
-                                    <h3>AI Chatbot</h3>
-                                    <p>Machine Learning</p>
-                                    <a href="#" class="portfolio-link" data-project="project2"><i class="fas fa-link"></i></a>
+                    <!-- AI Chatbot -->
+                    <div class="portfolio-item machine-learning" data-category="machine-learning">
+                        <div class="portfolio-card">
+                            <div class="portfolio-image">
+                                <img src="images/project2.png" alt="AI Chatbot">
+                                <div class="portfolio-overlay">
+                                    <div class="overlay-content">
+                                        <div class="overlay-buttons">
+                                            <a href="#" class="overlay-btn" data-project="project2">
+                                                <i class="fas fa-eye"></i>
+                                            </a>
+                                            <a href="#" class="overlay-btn">
+                                                <i class="fas fa-external-link-alt"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="portfolio-badge">AI</div>
+                            </div>
+                            <div class="portfolio-content">
+                                <div class="portfolio-category">Machine Learning</div>
+                                <h3 class="portfolio-title">AI Chatbot</h3>
+                                <p class="portfolio-description">Intelligent chatbot powered by natural language processing for customer support automation.</p>
+                                <div class="portfolio-tech">
+                                    <span class="tech-tag">Python</span>
+                                    <span class="tech-tag">TensorFlow</span>
+                                    <span class="tech-tag">OpenAI API</span>
+                                    <span class="tech-tag">Flask</span>
+                                </div>
+                                <div class="portfolio-meta">
+                                    <span class="meta-item">
+                                        <i class="fas fa-calendar"></i>
+                                        August 2022
+                                    </span>
+                                    <span class="meta-item">
+                                        <i class="fas fa-clock"></i>
+                                        2 months
+                                    </span>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="portfolio-item mobile-apps">
-                        <div class="portfolio-img">
-                            <img src="images/project3.png" alt="Fitness Tracker App">
-                            <div class="portfolio-overlay">
-                                <div class="portfolio-info">
-                                    <h3>Fitness Tracker App</h3>
-                                    <p>Mobile Development</p>
-                                    <a href="#" class="portfolio-link" data-project="project3"><i class="fas fa-link"></i></a>
+                    <!-- Fitness Tracker App -->
+                    <div class="portfolio-item mobile-apps" data-category="mobile-apps">
+                        <div class="portfolio-card">
+                            <div class="portfolio-image">
+                                <img src="images/project3.png" alt="Fitness Tracker App">
+                                <div class="portfolio-overlay">
+                                    <div class="overlay-content">
+                                        <div class="overlay-buttons">
+                                            <a href="#" class="overlay-btn" data-project="project3">
+                                                <i class="fas fa-eye"></i>
+                                            </a>
+                                            <a href="#" class="overlay-btn">
+                                                <i class="fas fa-external-link-alt"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="portfolio-badge">Mobile</div>
+                            </div>
+                            <div class="portfolio-content">
+                                <div class="portfolio-category">Mobile Development</div>
+                                <h3 class="portfolio-title">Fitness Tracker App</h3>
+                                <p class="portfolio-description">Cross-platform fitness tracking application with workout planning and progress monitoring.</p>
+                                <div class="portfolio-tech">
+                                    <span class="tech-tag">React Native</span>
+                                    <span class="tech-tag">Firebase</span>
+                                    <span class="tech-tag">Redux</span>
+                                    <span class="tech-tag">HealthKit</span>
+                                </div>
+                                <div class="portfolio-meta">
+                                    <span class="meta-item">
+                                        <i class="fas fa-calendar"></i>
+                                        October 2022
+                                    </span>
+                                    <span class="meta-item">
+                                        <i class="fas fa-clock"></i>
+                                        4 months
+                                    </span>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="portfolio-item ui-ux-design">
-                        <div class="portfolio-img">
-                            <img src="images/project4.webp" alt="Travel App UI Design">
-                            <div class="portfolio-overlay">
-                                <div class="portfolio-info">
-                                    <h3>Travel App UI Design</h3>
-                                    <p>UI/UX Design</p>
-                                    <a href="#" class="portfolio-link" data-project="project4"><i class="fas fa-link"></i></a>
+                    <!-- Travel App UI Design -->
+                    <div class="portfolio-item ui-ux-design" data-category="ui-ux-design">
+                        <div class="portfolio-card">
+                            <div class="portfolio-image">
+                                <img src="images/project4.webp" alt="Travel App UI Design">
+                                <div class="portfolio-overlay">
+                                    <div class="overlay-content">
+                                        <div class="overlay-buttons">
+                                            <a href="#" class="overlay-btn" data-project="project4">
+                                                <i class="fas fa-eye"></i>
+                                            </a>
+                                            <a href="#" class="overlay-btn">
+                                                <i class="fas fa-external-link-alt"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="portfolio-badge">Design</div>
+                            </div>
+                            <div class="portfolio-content">
+                                <div class="portfolio-category">UI/UX Design</div>
+                                <h3 class="portfolio-title">Travel App UI Design</h3>
+                                <p class="portfolio-description">Complete UI/UX design system for a travel booking application with user research and prototyping.</p>
+                                <div class="portfolio-tech">
+                                    <span class="tech-tag">Figma</span>
+                                    <span class="tech-tag">Adobe XD</span>
+                                    <span class="tech-tag">InVision</span>
+                                    <span class="tech-tag">Sketch</span>
+                                </div>
+                                <div class="portfolio-meta">
+                                    <span class="meta-item">
+                                        <i class="fas fa-calendar"></i>
+                                        December 2022
+                                    </span>
+                                    <span class="meta-item">
+                                        <i class="fas fa-clock"></i>
+                                        6 weeks
+                                    </span>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="portfolio-item web-development">
-                        <div class="portfolio-img">
-                            <img src="images/project5.png" alt="Portfolio Website">
-                            <div class="portfolio-overlay">
-                                <div class="portfolio-info">
-                                    <h3>Portfolio Website</h3>
-                                    <p>Web Development</p>
-                                    <a href="#" class="portfolio-link" data-project="project5"><i class="fas fa-link"></i></a>
+                    <!-- Portfolio Website -->
+                    <div class="portfolio-item web-development" data-category="web-development">
+                        <div class="portfolio-card">
+                            <div class="portfolio-image">
+                                <img src="images/project5.png" alt="Portfolio Website">
+                                <div class="portfolio-overlay">
+                                    <div class="overlay-content">
+                                        <div class="overlay-buttons">
+                                            <a href="#" class="overlay-btn" data-project="project5">
+                                                <i class="fas fa-eye"></i>
+                                            </a>
+                                            <a href="#" class="overlay-btn">
+                                                <i class="fas fa-external-link-alt"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="portfolio-badge">Personal</div>
+                            </div>
+                            <div class="portfolio-content">
+                                <div class="portfolio-category">Web Development</div>
+                                <h3 class="portfolio-title">Portfolio Website</h3>
+                                <p class="portfolio-description">Modern, responsive portfolio website showcasing professional work and skills with smooth animations.</p>
+                                <div class="portfolio-tech">
+                                    <span class="tech-tag">HTML5</span>
+                                    <span class="tech-tag">CSS3</span>
+                                    <span class="tech-tag">JavaScript</span>
+                                    <span class="tech-tag">GSAP</span>
+                                </div>
+                                <div class="portfolio-meta">
+                                    <span class="meta-item">
+                                        <i class="fas fa-calendar"></i>
+                                        January 2023
+                                    </span>
+                                    <span class="meta-item">
+                                        <i class="fas fa-clock"></i>
+                                        3 weeks
+                                    </span>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="portfolio-item machine-learning">
-                        <div class="portfolio-img">
-                            <img src="images/project6.jpg" alt="Image Recognition">
-                            <div class="portfolio-overlay">
-                                <div class="portfolio-info">
-                                    <h3>Image Recognition System</h3>
-                                    <p>Machine Learning</p>
-                                    <a href="#" class="portfolio-link" data-project="project6"><i class="fas fa-link"></i></a>
+                    <!-- Image Recognition System -->
+                    <div class="portfolio-item machine-learning" data-category="machine-learning">
+                        <div class="portfolio-card">
+                            <div class="portfolio-image">
+                                <img src="images/project6.jpg" alt="Image Recognition System">
+                                <div class="portfolio-overlay">
+                                    <div class="overlay-content">
+                                        <div class="overlay-buttons">
+                                            <a href="#" class="overlay-btn" data-project="project6">
+                                                <i class="fas fa-eye"></i>
+                                            </a>
+                                            <a href="#" class="overlay-btn">
+                                                <i class="fas fa-external-link-alt"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="portfolio-badge">ML</div>
+                            </div>
+                            <div class="portfolio-content">
+                                <div class="portfolio-category">Machine Learning</div>
+                                <h3 class="portfolio-title">Image Recognition System</h3>
+                                <p class="portfolio-description">Computer vision system for object detection and classification using deep learning algorithms.</p>
+                                <div class="portfolio-tech">
+                                    <span class="tech-tag">Python</span>
+                                    <span class="tech-tag">TensorFlow</span>
+                                    <span class="tech-tag">OpenCV</span>
+                                    <span class="tech-tag">CNN</span>
+                                </div>
+                                <div class="portfolio-meta">
+                                    <span class="meta-item">
+                                        <i class="fas fa-calendar"></i>
+                                        March 2023
+                                    </span>
+                                    <span class="meta-item">
+                                        <i class="fas fa-clock"></i>
+                                        5 months
+                                    </span>
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Stats -->
+        <section class="portfolio-stats">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3>50,000+</h3>
+                            <p>Lines of Code</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3>15+</h3>
+                            <p>Happy Clients</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3>8</h3>
+                            <p>Awards Won</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-coffee"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3>1000+</h3>
+                            <p>Cups of Coffee</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="portfolio-cta">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Ready to Start Your Project?</h2>
+                    <p>Let's collaborate to bring your ideas to life with cutting-edge technology and creative solutions.</p>
+                    <div class="cta-buttons">
+                        <a href="contact.html" class="btn btn-primary">Start a Project</a>
+                        <a href="services.html" class="btn btn-secondary">View Services</a>
                     </div>
                 </div>
             </div>
@@ -211,122 +519,13 @@
         <!-- Similar structures for other project details (project2, project3, etc.) -->
     </main>
 
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <!-- Company Info -->
-                <div class="footer-logo">
-                    <h2>Dev<span>Student</span></h2>
-                    <div class="section-divider"></div>
-                    <p>Building the future, one line of code at a time. Passionate about web development, software engineering, and creating digital experiences that matter.</p>
-                    <div class="office-hours">
-                        <h3>Office Hours</h3>
-                        <p>Monday - Friday: 9AM - 6PM</p>
-                        <p>Weekend: By Appointment</p>
-                    </div>
-                </div>
-    
-                <!-- Quick Links -->
-                <div class="footer-links">
-                    <h3>Quick Links</h3>
-                    <div class="section-divider"></div>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Me</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="portfolio.html">Portfolio</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-    
-                <!-- Services -->
-                <div class="footer-services">
-                    <h3>Services</h3>
-                    <div class="section-divider"></div>
-                    <ul>
-                        <li><a href="services.html#webdev">Web Development</a></li>
-                        <li><a href="services.html#mobiledev">Mobile App Development</a></li>
-                        <li><a href="services.html#uiux">UI/UX Design</a></li>
-                        <li><a href="services.html#consulting">Tech Consulting</a></li>
-                        <li><a href="services.html#seo">SEO Optimization</a></li>
-                    </ul>
-                </div>
-    
-                <!-- Contact Info -->
-                <div class="footer-contact">
-                    <h3>Get In Touch</h3>
-                    <div class="section-divider"></div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="contact-text">
-                            212 Sweetlove Street<br>
-                            Greater Accra, Ghana
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-text">
-                            wahabfarrakhan@gmail.com
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone-alt"></i>
-                        </div>
-                        <div class="contact-text">
-                            +233 (0) 500-428-501
-                        </div>
-                    </div>
-    
-                    <!-- Social Media -->
-                    <h3>Connect With Me</h3>
-                    <div class="social-icons">
-                        <a href="https://github.com/farrakhanwahab"><i class="fab fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/farrakhan-wahab-227a15241?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"><i class="fab fa-linkedin"></i></a>
-                        <a href="mailto:wahabfarrakhan@gmail.com"><i class="fas fa-envelope"></i></a>
-                        <a href="https://www.instagram.com/faa.gw?igsh=YzdlazYzcms2MTdn&utm_source=qr"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Newsletter Section -->
-            <div class="newsletter-section">
-                <div class="newsletter-container">
-                    <div class="newsletter-text">
-                        <h3>Subscribe to My Newsletter</h3>
-                        <p>Stay updated with my latest projects, tech insights, and coding tips.</p>
-                    </div>
-                    <form class="newsletter-form">
-                        <input type="email" placeholder="Enter your email" class="newsletter-input" required>
-                        <button type="submit" class="newsletter-button">Subscribe</button>
-                    </form>
-                </div>
-            </div>
-            
-            <!-- Footer Bottom -->
-            <div class="footer-bottom">
-                <div class="footer-copyright">
-                    <p>&copy; 2025 FW. All Rights Reserved.</p>
-                    <p>Developed by Farrakhan Wahab</p>
-                </div>
-                <div class="footer-legal">
-                    <a href="privacy.html">Privacy Policy</a>
-                    <a href="terms.html">Terms of Service</a>
-                    <a href="sitemap.html">Sitemap</a>
-                    <a href="contact.html#faq">FAQ</a>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <!-- Footer Component Placeholder -->
+    <div id="footer-placeholder"></div>
 
     <script src="js/script.js"></script>
     <script src="js/page-transitions.js"></script>
     <script src="js/theme-toggle.js"></script>
     <script src="js/portfolio-filter.js"></script>
+    <script src="js/components.js"></script>
 </body>
 </html>
